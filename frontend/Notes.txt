@@ -1,0 +1,8 @@
+
+Afaf
+
+* use rafce after downalding the react js extension , it creates the functional component for you
+* You will find the products.js file within the Assets folder , make sur to downald ur photos in the Assets folder
+* I have added a css reset within the index.css , if you have any global changes (fonts , variables....) make sur to add them there
+* I have also changed the title of the website from the index.html within the public folder
+
