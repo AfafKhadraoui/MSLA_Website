@@ -1,5 +1,4 @@
-import React, { createContext } from "react";
-import products from "../components/Assets/products";
+import React, { createContext,useState } from "react";
 import products from "../components/Assets/products";
 
 export const ShopContext = createContext(null);
