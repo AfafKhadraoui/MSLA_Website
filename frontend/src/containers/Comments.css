@@ -1,0 +1,52 @@
+.Comment_container{
+    width: 100%;
+    height: 350px;
+
+}
+.comments{
+    width: 100%;
+    height: 270px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+.comment{
+    width: 35%;
+    height: 150px; 
+    background-color:#4c5187 ;
+    border-radius: 10px;
+}
+.Comment_container span{
+ font-family: "PlayfairDisplay";
+padding: 0px 44%;
+ font-weight: bold;
+ font-size: 30px;
+ 
+}@font-face {
+    font-family: "PlayfairDisplay";
+    src: url("../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf");
+}
+.comment p{
+    color:white;
+    font-size: 11px;
+    font-weight:0;
+    
+}
+.comment{
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+.comment img{
+    border-radius: 50%;
+    width: 20%;
+    height: 70%;
+}
+.comment img, .comment p{
+
+    margin: 10px;
+}

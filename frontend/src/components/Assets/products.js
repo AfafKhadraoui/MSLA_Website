@@ -7,7 +7,7 @@ import women_product6 from "./women/product6.png";
 import women_product7 from "./women/product7.png";
 import women_product8 from "./women/product8.png";
 import women_product9 from "./women/product9.png";
-import women_produc10 from "./women/produc10.png";
+import women_produc10 from "./women/product10.png";
 import women_product11 from "./women/product11.png";
 import women_product12 from "./women/product12.png";
 import women_product13 from "./women/product13.png";
@@ -42,8 +42,8 @@ import man_product8 from "./man/man_product8.jpg";
 import man_product9 from "./man/man_product9.jpg";
 import man_product10 from "./man/man_product10.jpg";
 import man_product11 from "./man/man_product11.jpg";
-import man_product12 from "./man/man_product12.jpg";
-import man_product13 from "./man/man_product.jpg";
+import man_product12 from "./man/man_product12.jpeg";
+import man_product13 from "./man/man_product13.jpg";
 
 let Products = [
   //women..........................

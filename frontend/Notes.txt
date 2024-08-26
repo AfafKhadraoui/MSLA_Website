@@ -6,4 +6,6 @@ Afaf
 * I have added a css reset within the index.css , if you have any global changes (fonts , variables....) make sur to add them there
 * I have also changed the title of the website from the index.html within the public folder
 
-
+serine : 
+* i added a font folder to put the new fonts we can need
+*i added a link in public index.html for icons as search bar icon

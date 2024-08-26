@@ -1,0 +1,50 @@
+
+.AboutUs_container{
+   
+    text-align: center;
+    width: 50%;
+    margin: 20px;
+
+    
+}
+.AboutUs_container .image
+{
+    margin: 30px;
+    box-shadow: 3px 3px 6px 3px rgba(207, 207, 207, 0.74);
+}
+.AboutUs_paragraph{
+    font-family:'arial';
+    font-weight: 300;
+    line-height:25px ;
+
+}
+
+@font-face {
+    font-family: 'Graphie ExtraBold';
+    src: url('../../fonts/Graphie-ExtraBold.otf')
+}
+@font-face {
+    font-family: 'HelveticaNeueBold';
+    src: url('../../fonts/HelveticaNeueBold.otf')
+}
+.title{
+    font-size: 5rem;
+    font-weight: bold;
+    color: #353753;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    font-family:'HelveticaNeueBold';
+}
+/* body{
+    color: #353753;
+    background-image: url("../../components/Assets/AboutUsPics/Vector.png");
+    background-repeat: no-repeat;
+    background-size: 120% 500px;
+    background-position: center ;
+
+} */
+.pink_line{
+    width: 100%;
+    height: 60px;
+    box-shadow: none;
+}
