@@ -42,6 +42,7 @@ function Navbar() {
         </li>
         <li className="nav__item">
           <a href={aboutUs} className="nav__link">
+            {/* serine use links instead of href */}
             About Us
           </a>
         </li>
