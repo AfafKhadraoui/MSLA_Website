@@ -4,6 +4,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Graphie ExtraBold';
+  src: url('../../fonts/Graphie-ExtraBold.otf')
+}
+@font-face {
+  font-family: 'HelveticaNeueBold';
+  src: url('../../fonts/HelveticaNeueBold.otf')
+}
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Bold.ttf");
+}
+
 /* :root { */
   /* u can use css variables as well for colors, fonts, sizes....*/
   /* example */
