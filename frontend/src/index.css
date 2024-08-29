@@ -5,30 +5,31 @@
   box-sizing: border-box;
 }
 @font-face {
-  font-family: 'Graphie ExtraBold';
-  src: url('../../fonts/Graphie-ExtraBold.otf')
+  font-family: "Graphie ExtraBold";
+  src: url("./fonts/Graphie-ExtraBold.otf");
 }
 @font-face {
-  font-family: 'HelveticaNeueBold';
-  src: url('../../fonts/HelveticaNeueBold.otf')
+  font-family: "HelveticaNeueBold";
+  src: url("./fonts/HelveticaNeueBold.otf");
 }
 @font-face {
   font-family: "PlayfairDisplay";
-  src: url("../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf");
+  src: url("./fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: "Poppins";
-  src: url("../fonts/Poppins-Bold.ttf");
+  src: url("./fonts/Poppins-Bold.ttf");
 }
 
+/* You can use the fonts from anywhere just by using the font family name mentioned here */
 /* :root { */
-  /* u can use css variables as well for colors, fonts, sizes....*/
-  /* example */
-  /* --COLOR : #23af78 */
-  /* in css use var (--COLOR) to use it  */
+/* u can use css variables as well for colors, fonts, sizes....*/
+/* example */
+/* --COLOR : #23af78 */
+/* in css use var (--COLOR) to use it  */
 /* } */
 body {
-  color:#353753;
+  color: #353753;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
