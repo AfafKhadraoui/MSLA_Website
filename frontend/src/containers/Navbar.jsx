@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import Home from "../Pages/Home";
-import aboutUs from "../Pages/AboutUs";
-import contact from "../Pages/Contact";
-import products from "../Pages/Product";
+import { Link } from 'react-router-dom';
+
 
 function Navbar() {
   const [active, setActive] = useState("nav__menu");
@@ -21,34 +19,30 @@ function Navbar() {
   return (
     //nav.nav
     <nav className="nav">
-      <a href={Home} className="nav__brand">
+      <Link to="#" className="nav__brand">
         online shop
-      </a>
+      </Link>
       <ul className={active}>
         <li className="nav__item">
-          <a href={Home} className="nav__link">
+          <Link to="/" className="nav__link">
             Home
-          </a>
+          </Link>
         </li>
-        {/* <li className="nav_item">
-          <a href="#" className="nav_link">
-            New Arrivals
-          </a>
-        </li> */}
+       
         <li className="nav__item">
-          <a href={products} className="nav__link">
+          <Link to="#" className="nav__link">
             Clothing
-          </a>
+          </Link>
         </li>
         <li className="nav__item">
-          <a href={aboutUs} className="nav__link">
+          <Link to="/about" className="nav__link">
             About Us
-          </a>
+          </Link>
         </li>
         <li className="nav__item">
-          <a href={contact} className="nav__link">
+          <Link to="/contact" className="nav__link">
             Contact Us
-          </a>
+          </Link>
         </li>
       </ul>
       <div onClick={navToggle} className={toggleIcon}>

@@ -56,7 +56,7 @@
     font-family: "PlayfairDisplay";
     src: url("../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf");
 }
-p{
+.welcome_paragraph{
     font-family:"Poppins" ;
     font-weight: 100;
     font-size: 15px;
@@ -82,6 +82,7 @@ p{
     
     width:560px;
     height:400px;
+    
 }
 @media screen and (max-width:950px){
     .HomeTop_container{

@@ -1,4 +1,6 @@
 import "./CSS/AboutUs.css";
+import SearchBar from "../containers/SearchBar";
+import Buttom from "../containers/BlueButtom.jsx";
 import pic1 from "../components/Assets/AboutUsPics/pic1.jpg";
 import pic2 from "../components/Assets/AboutUsPics/pic2.webp";
 import pic3 from "../components/Assets/AboutUsPics/pic3.jpg";
@@ -10,7 +12,9 @@ import pic7 from "../components/Assets/AboutUsPics/pic7.jpg";
 import line from "../components/Assets/AboutUsPics/pink_line.png";
 function AboutUs() {
   return (
+    
     <center>
+        <SearchBar/>
          <img className="pink_line" src={line} alt="background pink line"/>
       <div className="AboutUs_container">
 
@@ -65,12 +69,12 @@ function AboutUs() {
         <p className="AboutUs_paragraph">
           <b>People: </b>
           <br />
-          We’re serious about making sure every person in our global supply
+          We're serious about making sure every person in our global supply
           chain is safe at work and has their rights respected and protected. We
           set high ethical standards and support our suppliers to help them meet
           them. Our priorities include transparency; improving wages; health and
           safety; addressing and reducing modern-slavery risks, and identifying
-          and stopping child labour. 
+          and stopping child labour.
         </p>
         <img className="image" src={pic6} alt="people" width="75%" height="300px" />
         <p className="AboutUs_paragraph">
@@ -84,6 +88,7 @@ function AboutUs() {
         </p>
         <img className="image" src={pic5} alt="online shop pic" width="75%" height="300px" />
       </div>
+      <Buttom/>
     </center>
   );
 }

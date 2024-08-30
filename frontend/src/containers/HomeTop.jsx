@@ -12,7 +12,7 @@ function HomeTop() {
         <span className="p1">Elevate Your Style</span>
         <span className="p2">with</span>
         <p className="p3"> MSLA trendy Clothing</p>
-        <p>
+        <p className="welcome_paragraph">
           Welcome to our online store, your one-stop shop for fashionable
           clothing for women, men, and children. Explore our carefully curated
           selection and discover stylish pieces that suit your unique taste.

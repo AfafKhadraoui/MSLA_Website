@@ -38,13 +38,14 @@
   margin-bottom: 50px;
 }
 .item {
-  width: 20%;
-  height: 300px;
+  width: 25%;
+  height: 380px;
   background-color: #8387b3;
   border-radius: 10%;
   display: flex;
   justify-content: center;
   align-items: end;
+  box-shadow: 2px 2px 7px 2px rgb(219, 219, 219);
 }
 .item a {
   font-weight: bolder;
@@ -54,15 +55,15 @@
 }
 
 .Kids {
-  background-image: url(../components/Assets/images/kids.jpeg);
+  background-image: url(../components/Assets/images/kids.jpg);
   background-size: cover;
 }
 .Men {
-  background-image: url(../components/Assets/images/man.jpg);
+  background-image: url(../components/Assets/images/men.jpg);
   background-size: cover;
 }
 .Women {
-  background-image: url(../components/Assets/images/wemen.webp);
+  background-image: url(../components/Assets/images/women.jpg);
   background-size: cover;
 }
 .Women:hover,
@@ -70,7 +71,7 @@
 .Kids:hover {
   opacity: 0.6;
   width: 21%;
-  height: 305px;
+  height: 385px;
   transition: 0.5s ease-in-out;
 }
 .Women:hover,

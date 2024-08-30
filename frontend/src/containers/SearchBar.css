@@ -62,6 +62,9 @@
     width: 300px;
   }
  .pages i{
-    font-size: 30px;
+    font-size: 25px;
+ }
+ .pages .fa-heart,.fa-shopping-cart,.login-icon {
+  padding:0px 20px 0px 15px;
  }
   

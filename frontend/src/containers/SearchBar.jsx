@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,Outlet} from "react";
 import "./SearchBar.css";
 import Products from "../components/Assets/products";
 import Navbar from "../containers/Navbar";
@@ -21,6 +21,7 @@ function SearchBar() {
 //   const matchingProducts = findMatchingProducts(Products, searchTerm);
  
   return (
+    <>
     <div className="templateContainer">
       <div className="top">
         <h1 className="logo">MSLA</h1>
@@ -39,6 +40,9 @@ function SearchBar() {
           </a>
           <a href="../Pages/Cart">
             <i class="fa fa-shopping-cart "></i>
+          </a>
+          <a href="../Pages/Wihshlist">
+            <i class="fa fa-heart "></i>
           </a>
         </div>
       </div>
@@ -88,6 +92,10 @@ function SearchBar() {
         }
       </div>
     </div>
+     
+     
+   
+   </>
   );
 }
 export default SearchBar;

@@ -1,6 +1,3 @@
-
-
-import Navbar from "../containers/Navbar";
 import SearchBar from "../containers/SearchBar";
 import Buttom from "../containers/BlueButtom.jsx";
 import HomeTop from "../containers/HomeTop.jsx";
