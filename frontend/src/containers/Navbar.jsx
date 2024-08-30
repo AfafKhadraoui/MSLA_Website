@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+
 import { Link } from 'react-router-dom';
+
+
+import Home from "../Pages/Home";
+import aboutUs from "../Pages/AboutUs";
+import contact from "../Pages/Contact";
+import products from "../Pages/Product";
+import { Outlet } from "react-router-dom";
 
 
 function Navbar() {
@@ -18,6 +26,7 @@ function Navbar() {
 
   return (
     //nav.nav
+<>
     <nav className="nav">
       <Link to="#" className="nav__brand">
         online shop
@@ -51,6 +60,13 @@ function Navbar() {
         <div className="line3"></div>
       </div>
     </nav>
+      <main>
+      <Outlet/>
+    </main>
+  </>
+
+ 
+
   );
 }
 export default Navbar;

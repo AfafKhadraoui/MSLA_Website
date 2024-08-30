@@ -42,7 +42,7 @@ import man_product8 from "./man/man_product8.jpg";
 import man_product9 from "./man/man_product9.jpg";
 import man_product10 from "./man/man_product10.jpg";
 import man_product11 from "./man/man_product11.jpg";
-import man_product12 from "./man/man_product12.jpeg";
+import man_product12 from "./man/man_product12.jpg";
 import man_product13 from "./man/man_product13.jpg";
 
 let Products = [
