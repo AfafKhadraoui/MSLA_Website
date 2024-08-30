@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-let Schema = new Schema();
+let Schema = mongoose.Schema;
 
 const orderSchema = new Schema({
   user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
