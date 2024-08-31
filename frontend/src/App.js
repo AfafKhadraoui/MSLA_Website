@@ -7,26 +7,38 @@ import LoginSignup from "./Pages/loginSignup.jsx"
 import Wishlist from "./Pages/Wishlist.jsx";
 import AboutUs from "./Pages/AboutUs.jsx";
 import Contact from "./Pages/Contact.jsx";
-// import Footer from "./components/footer/Footer.jsx";
+import SearchBar from "./containers/SearchBar.jsx";
+import BlueButtom from "./containers/BlueButtom.jsx";
 
 function App() {
   return (
-    <div>
     <BrowserRouter>
+      <SearchBar />
       <Routes>
-      <Route index element={<Home/>} />
-      <Route path="/" element={<Home />}/>
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/login" element={<LoginSignup />} />
-      <Route path="/wishlist" element={<Wishlist />} />
-      <Route path="/about" element={<AboutUs/>} />
-      <Route path="/contact" element={<Contact />} />  
-         
-       
+        <Route path="/" element={<Navbar />}>
+          <Route index element={<Home />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="login" element={<LoginSignup />} />
+          <Route path="wishlist" element={<Wishlist />} />
+          <Route path="about" element={<AboutUs />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
       </Routes>
-      {/* <Footer /> */}
+     <BlueButtom />
     </BrowserRouter>
-    </div>
+
+    /* <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/login" element={<LoginSignup />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      {/* <Footer /> */
+    // </BrowserRouter> */}
 
   );
 }

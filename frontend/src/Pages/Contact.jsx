@@ -1,6 +1,5 @@
 import "./CSS/Contact.css";
 import SearchBar from "../containers/SearchBar";
-import Buttom from "../containers/BlueButtom.jsx";
 
 function Contact() {
   return (
@@ -57,7 +56,6 @@ function Contact() {
           </form>
         </div>
       </div>
-      <Buttom />
     </center>
   );
 }

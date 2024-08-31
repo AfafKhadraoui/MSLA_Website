@@ -1,0 +1,159 @@
+* {
+  overflow-x: hidden;
+}
+.LoginSignup-container {
+  margin: 150px auto;
+  width: 80%;
+}
+.LoginSignup-container h1 {
+  text-align: center;
+  font-family: 'HelveticaNeueBold';
+  font-size: 4rem;
+}
+.loginSignup {
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+  font-family: "Poppins-Regular";
+  background-color: #a0a3b4;
+}
+.imgContainer,
+.loginSignup-fields {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.imgContainer img,
+.loginSignup-fields-items {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.loginSignup-fields-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+.loginSignup-fields-Text h2 {
+  font-family: "Poppins";
+  color: var(--MAIN-BLUE);
+}
+.loginSignup-fields-Text p {
+  color: #4f517d;
+  font-size: 14px;
+}
+
+.field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+.field input,
+.loginSignup-fields-items button {
+  width: 80%;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid var(--MAIN-BLUE);
+  overflow: hidden;
+}
+.field input:hover {
+  border: 3px solid var(--MAIN-BLUE);
+}
+::placeholder {
+  color: #4f517d;
+  font-size: 15px;
+}
+.field-checkbox {
+  display: flex;
+  gap: 10px;
+}
+.field-checkbox a {
+  font-weight: 600;
+  color: var(--MAIN-BLUE);
+}
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background-color: var(--MAIN-BLUE);
+  color: #fff;
+  outline: none;
+}
+.loginSignup-fields-items button:hover {
+  color: var(--MAIN-BLUE);
+  background-color: white;
+  filter: none;
+  transform: none;
+}
+.field span {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+p {
+  width: 90%;
+  white-space: nowrap;
+}
+@media screen and (max-width: 900px) {
+  .LoginSignup-container {
+    margin: 20px auto;
+  }
+  .field input,
+  .loginSignup-fields-items button {
+    width: 90%;
+  }
+  .loginSignup-fields {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .LoginSignup-container {
+    margin: 50px auto;
+  }
+  .imgContainer,
+  .loginSignup .logo {
+    display: none;
+  }
+
+  .loginSignup-fields-items {
+    padding: 20px;
+  }
+  .loginSignup-fields-Text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .LoginSignup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 580px) {
+  .LoginSignup-container {
+    width: 100%;
+    margin: 0px;
+    overflow: hidden;
+  }
+  .LoginSignup {
+    width: 100%;
+    margin-top: 0px;
+    overflow: hidden;
+  }
+}

@@ -28,6 +28,10 @@
 /* --COLOR : #23af78 */
 /* in css use var (--COLOR) to use it  */
 /* } */
+
+:root{
+  --MAIN-BLUE:#353753;
+}
 body {
   color: #353753;
   margin: 0;
@@ -42,11 +46,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 @font-face {
-  font-family: "PlayfairDisplay";
-  src: url("../src/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf");
-}
-@font-face {
-  font-family: "Poppins";
-  src: url("../src/fonts/Poppins-Bold.ttf");
+  font-family: "Poppins-Regular";
+  src: url("../src/fonts/Poppins-Regular.ttf");
 }

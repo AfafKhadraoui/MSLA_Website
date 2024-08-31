@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
-import userSchema from './schemas/userSchema'
-import productSchema from './schemas/productSchema'
-import orderSchema from './schemas/orderschema'
+import userSchema from './schemas/userSchema.js'
+import productSchema from './schemas/productSchema.js'
+import orderSchema from './schemas/orderschema.js'
 
 export const userCollection = mongoose.model("users", userSchema)
 export const productCollection = mongoose.model("products", productSchema)
