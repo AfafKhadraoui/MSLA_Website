@@ -88,7 +88,6 @@ function AboutUs() {
         </p>
         <img className="image" src={pic5} alt="online shop pic" width="75%" height="300px" />
       </div>
-      <Buttom/>
     </center>
   );
 }

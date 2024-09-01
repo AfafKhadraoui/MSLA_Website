@@ -79,6 +79,7 @@
     font-size: small;
   }
   .Buttom_container {
+    margin-top: 0px;
     height: 32em;
     width: 130%;
     transition: 0.5s ease-in-out;
