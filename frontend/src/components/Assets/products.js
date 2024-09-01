@@ -31,19 +31,19 @@ import kids_product15 from "./kids/product15.webp";
 import kids_product16 from "./kids/product16.webp";
 import kids_product17 from "./kids/product17.webp";
 
-import man_product1 from "./man/man_product1.jpg";
-import man_product2 from "./man/man_product2.jpg";
-import man_product3 from "./man/man_product3.jpg";
-import man_product4 from "./man/man_product4.jpg";
-import man_product5 from "./man/man_product5.jpg";
-import man_product6 from "./man/man_product6.jpg";
-import man_product7 from "./man/man_product7.jpg";
-import man_product8 from "./man/man_product8.jpg";
-import man_product9 from "./man/man_product9.jpg";
-import man_product10 from "./man/man_product10.jpg";
-import man_product11 from "./man/man_product11.jpg";
-import man_product12 from "./man/man_product12.jpg";
-import man_product13 from "./man/man_product13.jpg";
+import man_product1 from "./Man/man_product1.jpg";
+import man_product2 from "./Man/man_product2.jpg";
+import man_product3 from "./Man/man_product3.jpg";
+import man_product4 from "./Man/man_product4.jpg";
+import man_product5 from "./Man/man_product5.jpg";
+import man_product6 from "./Man/man_product6.jpg";
+import man_product7 from "./Man/man_product7.jpg";
+import man_product8 from "./Man/man_product8.jpg";
+import man_product9 from "./Man/man_product9.jpg";
+import man_product10 from "./Man/man_product10.jpg";
+import man_product11 from "./Man/man_product11.jpg";
+import man_product12 from "./Man/man_product12.jpg";
+import man_product13 from "./Man/man_product13.jpg";
 
 let Products = [
   //women..........................
