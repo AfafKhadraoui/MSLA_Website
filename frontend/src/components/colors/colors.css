@@ -1,0 +1,59 @@
+
+.colors{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 10px;
+}
+
+.colors > input{
+    border-radius:50%;
+    width: 2.45rem;
+    height: 2.45rem;
+    border-width: 0;
+    margin: 0.5rem;
+}
+
+#Black{
+    background-color: black;
+    color: black;
+}
+
+#White{
+    background-color: white;
+    color: white;
+    border-color: lightgray;
+    border-width: 0.2rem;
+    border-style: solid;
+}
+
+#Sky{
+    background-color: skyblue;
+    color: skyblue;
+}
+
+#Navy{
+    background-color: navy;
+    color: navy;
+}
+
+#Red{
+    background-color: rgb(244, 29, 29);
+    color: rgb(244, 29, 29);
+}
+
+#Green{
+    background-color: green;
+    color: green;
+}
+
+#Pink{
+    background-color: pink;
+    color: pink;
+}
+
+#Purple{
+    background-color: purple;
+    color: purple;
+}
+

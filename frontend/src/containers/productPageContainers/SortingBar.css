@@ -1,0 +1,46 @@
+
+.sortingBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    border-bottom-style: solid;
+    border-bottom-width: 0.1rem;
+    border-bottom-color: lightgray;
+    height: 60px;
+}
+
+
+.clearSection{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    flex-grow: 4;
+    border-right-style: solid;
+    border-right-width: 0.1rem;
+    border-right-color: lightgray;
+}
+
+.sorting{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    flex-grow: 1;
+}
+
+.sorting > label{
+    margin: 1rem;
+    font-family: Poppins;
+    font-size: 20px;
+    margin-top: 2rem;
+
+}
+
+.sorting > select{
+    font-size: 18px;
+    border: none;
+    margin-top: 1rem;
+}
+
+
