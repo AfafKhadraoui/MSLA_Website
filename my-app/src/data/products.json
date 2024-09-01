@@ -1,0 +1,12 @@
+[
+  { "id": 1, "name": "T-shirt", "price": 19.99, "stock": 10, "colors": ["Red", "Blue", "Green"], "sizes": ["S", "M", "L"] },
+  { "id": 2, "name": "Jeans", "price": 49.99, "stock": 5, "colors": ["Black", "Blue"], "sizes": ["M", "L", "XL"] },
+  { "id": 3, "name": "Sneakers", "price": 89.99, "stock": 2, "colors": ["White", "Black"], "sizes": ["8", "9", "10"] },
+  { "id": 4, "name": "Jacket", "price": 120.00, "stock": 0, "colors": ["Brown", "Black"], "sizes": ["M", "L", "XL"] },
+  { "id": 5, "name": "Hat", "price": 25.00, "stock": 7, "colors": ["Red", "Blue"], "sizes": ["One Size"] },
+  { "id": 6, "name": "Scarf", "price": 15.00, "stock": 3, "colors": ["Red", "Green"], "sizes": ["One Size"] },
+  { "id": 7, "name": "Gloves", "price": 18.50, "stock": 4, "colors": ["Black", "Gray"], "sizes": ["S", "M", "L"] },
+  { "id": 8, "name": "Sunglasses", "price": 35.00, "stock": 6, "colors": ["Black", "Brown"], "sizes": ["One Size"] },
+  { "id": 9, "name": "Watch", "price": 150.00, "stock": 1, "colors": ["Silver", "Gold"], "sizes": ["One Size"] },
+  { "id": 10, "name": "Belt", "price": 20.00, "stock": 8, "colors": ["Black", "Brown"], "sizes": ["M", "L", "XL"] }
+]
