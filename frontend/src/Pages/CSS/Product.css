@@ -1,0 +1,62 @@
+.Clothes{
+    display: flex;
+    flex-direction: row;
+}
+.filter{
+    display: flex;
+    flex-grow: 0;
+    flex-direction: column;
+    align-content: center;
+    border-right-color: #00000027 ;
+    border-right-style: solid;
+    border-right-width: 0.35px;
+    width: 600px;
+    height: 755px;
+    
+}
+
+.headOfFilter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    border-bottom-width: 0.35px;
+    border-bottom-style: solid ;
+    border-bottom-color: #00000027 ;
+    font-size: 22px;
+}
+
+
+.filterBody{
+    display: flex;
+    flex-direction: column;
+    width: 63.5%;
+    align-self: flex-end;
+    height: 700px;
+}
+
+.filterBody > div{
+    padding-top: 30px;
+
+}
+
+p{
+    padding-bottom: 1px;
+    font-size: 18px;
+    color: #353753;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+
+.filtredClothes{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.artical{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
