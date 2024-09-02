@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useCart } from '../context/CartContext.js'; 
-import '../styles/styles.css'
+import '../styles/styles.css';
 
 const ProductItem = ({ product }) => {
   const { addToCart } = useCart();
@@ -17,9 +17,15 @@ const ProductItem = ({ product }) => {
 
   return (
     <div className='product-item'>
-      <h3>{product.name}</h3>
-      <p>${product.price}</p>
-      <p>Stock: {product.stock}</p>
+      <h3>{product.product_name}</h3>
+      <img src={product.image} alt={product.product_name} />
+      <p>Old Price: ${product.old_price}</p>
+      <p>New Price: ${product.new_price}</p>
+      <p>Category: {product.category}</p>
+      <p>Type: {product.type}</p>
+      <p>Description: {product.description}</p>
+      <p>Tags: {product.tags?.join(', ')}</p>
+      <p>Stock: {product.quantity}</p>
       <div>
         <label>
           Color:
@@ -36,7 +42,7 @@ const ProductItem = ({ product }) => {
           Size:
           <select value={selectedSize} onChange={(e) => setSelectedSize(e.target.value)}>
             <option value="">Select Size</option>
-            {product.sizes.map((size, index) => (
+            {product.size.map((size, index) => (
               <option key={index} value={size}>{size}</option>
             ))}
           </select>

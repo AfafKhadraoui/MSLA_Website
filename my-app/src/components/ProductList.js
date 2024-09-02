@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import ProductItem from './ProductItem.js'; // Ensure .js extension
-import '../styles/styles.css'; // Adjust the path based on your project structure
+import ProductItem from './ProductItem.js';
+import '../styles/styles.css';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/products') // Ensure this URL matches your back-end server
+    fetch('http://localhost:5000/api/products') // Fetch from the 'products2' collection
       .then(response => response.json())
       .then(data => {
-        console.log(data); // Log the data to verify
+        console.log('Fetched products:', data); // Check the console for this log
         setProducts(data);
       })
       .catch(error => console.error('Error fetching products:', error));

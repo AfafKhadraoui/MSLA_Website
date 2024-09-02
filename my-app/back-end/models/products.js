@@ -1,12 +1,21 @@
-// back-end/models/products.js
 import mongoose from 'mongoose';
 
-const productSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  price: { type: Number, required: true },
-  stock: { type: Number, required: true },
-  colors: { type: [String], required: true }, // Array of strings for colors, required
-  sizes: { type: [String], required: true }   // Array of strings for sizes, required
-});
+const product2Schema = new mongoose.Schema({
+  product_id: { type: Number, required: true },
+  product_name: { type: String, required: true },
+  image_path: { type: String, required: true },  // Updated to 'image_path'
+  old_price: { type: Number, required: true },
+  new_price: { type: Number, required: true },
+  category: { type: String, required: true },
+  type: { type: String, required: true },
+  size: { type: [String], required: true },
+  colors: { type: [String], required: true },
+  description: { type: String, required: true },
+  tags: { type: [String], required: true },
+  quantity: { type: Number, required: true },
+  stocked: { type: Boolean, required: true }
+}, { collection: 'products2' });
 
-export const Product = mongoose.model('Product', productSchema);
+const Products2 = mongoose.model('Products2', product2Schema);
+
+export default Products2;
