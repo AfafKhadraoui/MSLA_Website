@@ -4,7 +4,7 @@ import CartItem from './CartItem.js';
 import '../styles/styles.css';
 
 const Cart = () => {
-  const { cart, removeFromCart } = useCart();
+  const { cart, removeFromCart, resetCart } = useCart();
 
   useEffect(() => {
     console.log(cart);
@@ -25,6 +25,7 @@ const Cart = () => {
           <div className="cart-total">
             <h3>Total: ${calculateTotal()}</h3>
           </div>
+          <button onClick={resetCart} className="reset-button">Reset Cart</button>
         </>
       ) : (
         <p>Your cart is empty</p>
