@@ -18,14 +18,15 @@ const ProductItem = ({ product }) => {
   return (
     <div className='product-item'>
       <h3>{product.product_name}</h3>
-      <img src={product.image} alt={product.product_name} />
+      <img src={product.image_path} alt={product.product_name} />
       <p>Old Price: ${product.old_price}</p>
       <p>New Price: ${product.new_price}</p>
       <p>Category: {product.category}</p>
       <p>Type: {product.type}</p>
+      <p>Stock: {product.stocked ? 'In Stock' : 'Out of Stock'}</p>
+      <p>Quantity: {product.quantity}</p>
       <p>Description: {product.description}</p>
-      <p>Tags: {product.tags?.join(', ')}</p>
-      <p>Stock: {product.quantity}</p>
+      <p>Tags: {product.tags.join(', ')}</p>
       <div>
         <label>
           Color:

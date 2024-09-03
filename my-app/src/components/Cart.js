@@ -1,33 +1,31 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { useCart } from '../context/CartContext.js';
-import CartItem from './CartItem.js';
+import { useCart } from '../context/CartContext.js'; 
+import CartItem from './CartItem.js'; 
 import '../styles/styles.css';
 
 const Cart = () => {
-  const { cart, increaseQuantity, decreaseQuantity } = useCart();
-  const location = useLocation();
+  const { cart, removeFromCart } = useCart();
 
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const productId = params.get('product');
-    const action = params.get('action');
+    console.log(cart);
+  }, [cart]);
 
-    if (productId && action) {
-      if (action === 'increase') {
-        increaseQuantity(productId);
-      } else if (action === 'decrease') {
-        decreaseQuantity(productId);
-      }
-    }
-  }, [location, increaseQuantity, decreaseQuantity]);
+  const calculateTotal = () => {
+    return cart.reduce((total, item) => total + item.new_price, 0).toFixed(2);
+  };
 
   return (
     <div className='cart'>
+      <h2>Shopping Cart</h2>
       {cart.length > 0 ? (
-        cart.map(product => (
-          <CartItem key={product._id} product={product} />
-        ))
+        <>
+          {cart.map(item => (
+            <CartItem key={item._id} item={item} removeFromCart={removeFromCart} />
+          ))}
+          <div className="cart-total">
+            <h3>Total: ${calculateTotal()}</h3>
+          </div>
+        </>
       ) : (
         <p>Your cart is empty</p>
       )}

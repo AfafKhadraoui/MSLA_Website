@@ -1,34 +1,21 @@
 import React from 'react';
-import { useCart } from '../context/CartContext.js';
-import { useNavigate } from 'react-router-dom';
 import '../styles/styles.css';
 
-const CartItem = ({ product }) => {
-  const { increaseQuantity, decreaseQuantity, removeFromCart } = useCart();
-  const navigate = useNavigate();
-
-  const handleIncrease = async (productId) => {
-    await increaseQuantity(productId);
-    navigate(`/cart?product=${productId}&action=increase`);
-  };
-
-  const handleDecrease = async (productId) => {
-    await decreaseQuantity(productId);
-    navigate(`/cart?product=${productId}&action=decrease`);
-  };
-
+const CartItem = ({ item, removeFromCart }) => {
   return (
     <div className='cart-item'>
-      <h3>{product.product_name}</h3>
-      <img src={product.image} alt={product.product_name} />
-      <p>Price: ${product.new_price}</p>
-      <p>Quantity: {product.quantity}</p>
-      <div className='quantity-controls'>
-        <button onClick={() => handleDecrease(product._id)}>-</button>
-        <span>{product.quantity}</span>
-        <button onClick={() => handleIncrease(product._id)}>+</button>
+      <div>
+        <h4>{item.product_name}</h4>
+        <img src={item.image_path} alt={item.product_name} />
+        <p>Old Price: ${item.old_price}</p>
+        <p>New Price: ${item.new_price}</p>
+        <p>Category: {item.category}</p>
+        <p>Type: {item.type}</p>
+        <p>Color: {item.selectedColor}</p>
+        <p>Size: {item.selectedSize}</p>
+        <p>Quantity: {item.quantity}</p>
       </div>
-      <button onClick={() => removeFromCart(product._id)}>Remove</button>
+      <button onClick={() => removeFromCart(item._id)}>Remove</button>
     </div>
   );
 };
