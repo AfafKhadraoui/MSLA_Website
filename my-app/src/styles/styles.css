@@ -1,4 +1,12 @@
-/* styles.css */
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Product List Styles */
 .product-list {
   display: flex;
   flex-wrap: wrap;
@@ -70,14 +78,19 @@
 /* Cart Styles */
 .cart {
   padding: 20px;
-  background-color: #f9f9f9; /* Light background color */
+  background-color: #fff; /* White background color */
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+.cart:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
 }
 
 .cart h2 {
-  color: #333; /* Darker text color */
+  color: #353753; /* Darker text color */
 }
 
 .cart-item {
@@ -86,14 +99,19 @@
   align-items: center;
   padding: 10px 0;
   border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease-in-out; /* Smooth animation */
 }
 
 .cart-item:last-child {
   border-bottom: none;
 }
 
+.cart-item:hover {
+  background-color: #f0f0f0; /* Light grey background on hover */
+}
+
 .cart-item h3 {
-  color: #333; /* Darker text color */
+  color: #353753; /* Darker text color */
 }
 
 .cart-item p {
@@ -101,21 +119,44 @@
 }
 
 .cart-item button {
-  background-color: #dc3545; /* Red button color */
+  background-color: #353753; /* Button color */
   color: #fff; /* Button text color */
   border: none;
   padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth animation */
 }
 
 .cart-item button:hover {
-  background-color: #c82333; /* Darker red button color on hover */
+  background-color: #2b2b5e; /* Darker button color on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
 }
 
 .cart-total {
   text-align: right;
   margin-top: 20px;
   font-size: 1.2em;
-  color: #333; /* Darker text color */
+  color: #353753; /* Darker text color */
+}
+
+/* Reset Button Styles */
+.reset-button {
+  background-color: #dc3545; /* Red background for reset button */
+  color: #fff; /* White text */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+.reset-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.reset-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(220, 53, 69, 0.5); /* Red shadow on focus */
 }
