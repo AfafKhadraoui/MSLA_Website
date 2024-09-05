@@ -78,7 +78,7 @@ body {
 /* Cart Styles */
 .cart {
   padding: 20px;
-  background-color: #fff; /* White background color */
+  background-color: #5D5E75; /* White background color */
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -185,4 +185,48 @@ body {
 .quantity-controls span {
   margin: 0 10px;
   font-size: 1.2em;
+}
+
+/* src/styles/styles.css */
+nav {
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}
+
+.product-list, .cart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-item, .product-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-controls button {
+  margin: 0 5px;
 }
