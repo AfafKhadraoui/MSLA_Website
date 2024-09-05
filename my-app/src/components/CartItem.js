@@ -8,7 +8,7 @@ const CartItem = ({ item }) => {
     <div className='cart-item'>
       <div>
         <h4>{item.product_name}</h4>
-        <img src={item.image_path} alt={item.product_name} />
+        <img src={item.image} alt={item.product_name} />
         <p>Old Price: ${item.old_price}</p>
         <p>New Price: ${item.new_price}</p>
         <p>Category: {item.category}</p>
