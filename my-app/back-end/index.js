@@ -1,4 +1,3 @@
-// back-end/index.js
 import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
@@ -19,20 +18,26 @@ mongoose.connect(MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('Could not connect to MongoDB', err));
 
-
 // API route to get all products
-// back-end/index.js
 app.get('/api/products', async (req, res) => {
   try {
-    const products = await Product.find({}); // Fetch specific fields
-    console.log(products); // Log the products to verify
+    const products = await Product.find({});
     res.json(products);
   } catch (err) {
-    console.error('Error fetching products:', err); // Log the error
+    console.error('Error fetching products:', err);
     res.status(500).json({ message: err.message });
   }
 });
 
+// API route to get a specific product by ID
+app.get('/api/products/:id', async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+    res.json(product);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
 
 // Start the server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

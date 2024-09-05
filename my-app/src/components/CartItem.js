@@ -1,7 +1,9 @@
 import React from 'react';
-import '../styles/styles.css';
+import { useCart } from '../context/CartContext.js';
 
-const CartItem = ({ item, removeFromCart }) => {
+const CartItem = ({ item }) => {
+  const { removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
+
   return (
     <div className='cart-item'>
       <div>
@@ -14,6 +16,11 @@ const CartItem = ({ item, removeFromCart }) => {
         <p>Color: {item.selectedColor}</p>
         <p>Size: {item.selectedSize}</p>
         <p>Quantity: {item.quantity}</p>
+        <div className="quantity-controls">
+          <button onClick={() => decreaseQuantity(item._id)}>-</button>
+          <span>{item.quantity}</span>
+          <button onClick={() => increaseQuantity(item._id)}>+</button>
+        </div>
       </div>
       <button onClick={() => removeFromCart(item._id)}>Remove</button>
     </div>

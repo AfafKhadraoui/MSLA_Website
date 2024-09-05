@@ -160,3 +160,29 @@ body {
   outline: none;
   box-shadow: 0 0 5px rgba(220, 53, 69, 0.5); /* Red shadow on focus */
 }
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.quantity-controls button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.quantity-controls button:hover {
+  background-color: #0056b3;
+}
+
+.quantity-controls span {
+  margin: 0 10px;
+  font-size: 1.2em;
+}
