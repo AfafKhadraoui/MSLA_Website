@@ -26,6 +26,7 @@ export const CartProvider = ({ children }) => {
         } else {
           setCart([...cart, { ...product, quantity: 1 }]);
         }
+        alert(`${product.product_name} has been added to your cart!`);
       } else {
         alert("Product is out of stock");
       }
