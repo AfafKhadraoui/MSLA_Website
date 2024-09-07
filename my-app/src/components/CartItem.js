@@ -11,8 +11,6 @@ const CartItem = ({ item }) => {
         <img src={item.image} alt={item.product_name} />
         <p>Old Price: ${item.old_price}</p>
         <p>New Price: ${item.new_price}</p>
-        <p>Category: {item.category}</p>
-        <p>Type: {item.type}</p>
         <p>Color: {item.selectedColor}</p>
         <p>Size: {item.selectedSize}</p>
         <p>Quantity: {item.quantity}</p>
