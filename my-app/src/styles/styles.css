@@ -210,13 +210,13 @@ body {
 /* Cart Total Section */
 .cart-total {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 20px;
 }
 
 .cart-total h3 {
-  font-size: 20px;
+  font-size: 35px;
   color: #353753;
 }
 
