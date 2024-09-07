@@ -16,7 +16,8 @@ const Cart = () => {
 
   return (
     <div className='cart'>
-      <h2>Shopping Cart</h2>
+      <h2>What's in your cart?</h2>
+      <button onClick={resetCart} className="reset-button">Reset Cart</button>
       {cart.length > 0 ? (
         <>
           {cart.map(item => (
@@ -25,7 +26,6 @@ const Cart = () => {
           <div className="cart-total">
             <h3>Total: ${calculateTotal()}</h3>
           </div>
-          <button onClick={resetCart} className="reset-button">Reset Cart</button>
         </>
       ) : (
         <p>Your cart is empty</p>

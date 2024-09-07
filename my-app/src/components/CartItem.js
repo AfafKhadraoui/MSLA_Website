@@ -22,7 +22,7 @@ const CartItem = ({ item }) => {
           <button onClick={() => increaseQuantity(item._id)}>+</button>
         </div>
       </div>
-      <button onClick={() => removeFromCart(item._id)}>Remove</button>
+      <button className='remove-button' onClick={() => removeFromCart(item._id)}>Remove</button>
     </div>
   );
 };

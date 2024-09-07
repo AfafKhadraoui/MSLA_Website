@@ -12,10 +12,10 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Product List</Link>
+              <Link to="/">Product List:</Link>
             </li>
             <li>
-              <Link to="/cart">Cart</Link>
+              <Link to="/cart">Cart:</Link>
             </li>
           </ul>
         </nav>
