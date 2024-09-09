@@ -36,6 +36,11 @@ body {
   transition: transform 0.2s; /* Smooth hover effect */
 }
 
+.product-item img {
+  height: 800px;
+  width: 500px;
+}
+
 .product-item:hover {
   transform: translateY(-5px); /* Lift effect on hover */
   background-color: #f0f8ff; /* Light blue background on hover */
