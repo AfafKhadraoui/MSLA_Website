@@ -3,7 +3,7 @@ import home_pic from "../components/Assets/images/pic2.png";
 
 function HomeTop() {
   function goToPage() {
-    window.location.href = "'../Pages/Product'";
+    window.location.href = '/Product';
   }
   return (
 

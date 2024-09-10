@@ -1,17 +1,21 @@
+.shoping{
+    margin-top: 115px;
+}
+
 .Clothes{
     display: flex;
     flex-direction: row;
 }
 .filter{
     display: flex;
-    flex-grow: 0;
+    /* flex-grow: 0; */
     flex-direction: column;
     align-content: center;
     border-right-color: #00000027 ;
     border-right-style: solid;
     border-right-width: 0.35px;
-    width: 600px;
-    height: 755px;
+    width: 20%;
+    height: 1260px;
     
 }
 
@@ -19,7 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
+    height: 60.4px;
     border-bottom-width: 0.35px;
     border-bottom-style: solid ;
     border-bottom-color: #00000027 ;
@@ -32,7 +36,7 @@
     flex-direction: column;
     width: 63.5%;
     align-self: flex-end;
-    height: 700px;
+    height: 1238px;
 }
 
 .filterBody > div{
@@ -50,13 +54,27 @@ p{
 
 
 .filtredClothes{
-    flex-grow: 1;
+    /* flex-grow: 1; */
     display: flex;
     flex-direction: column;
+    width: 80%;
 }
 
 .artical{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.applyFilter{
+    align-self:flex-start;
+    width: 150px;
+    height: 33px;
+    border-radius: 20.2px;
+    background-color:#353753;
+    color: white;
+    border: none; 
+    margin-top: 20px ;
+    margin-bottom: 40px;
+    margin-left: 0px;
 }

@@ -6,7 +6,7 @@
     margin-right: 10px;
 }
 
-.colors > input{
+.colors  button{
     border-radius:50%;
     width: 2.45rem;
     height: 2.45rem;
@@ -14,17 +14,28 @@
     margin: 0.5rem;
 }
 
+button.selected { 
+    border: 3.5px solid #54598f;
+}
+
+/* button.selected.W{
+    background-color: white;
+    color: white;
+} */
+
+
 #Black{
     background-color: black;
     color: black;
 }
 
-#White{
+
+.W{
     background-color: white;
     color: white;
-    border-color: lightgray;
-    border-width: 0.2rem;
-    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border: solid;
 }
 
 #Sky{

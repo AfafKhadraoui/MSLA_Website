@@ -9,6 +9,8 @@ import AboutUs from "./Pages/AboutUs.jsx";
 import Contact from "./Pages/Contact.jsx";
 import SearchBar from "./containers/SearchBar.jsx";
 import BlueButtom from "./containers/BlueButtom.jsx";
+import Product from "./Pages/Product.jsx";
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
           <Route path="wishlist" element={<Wishlist />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="/Product" element={<Product />} />
         </Route>
       </Routes>
      <BlueButtom />
