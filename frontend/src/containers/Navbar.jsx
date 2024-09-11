@@ -37,7 +37,7 @@ function Navbar() {
           </li>
 
           <li className="nav__item">
-            <Link to="#" className="nav__link">
+            <Link to="/Product" className="nav__link">
               Clothing
             </Link>
           </li>

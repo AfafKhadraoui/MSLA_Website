@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 import { useContext } from "react";
 import {ProductContext} from "../context/ProductContext.jsx";
 import "./CSS/Product.css";
@@ -23,6 +24,38 @@ const Product = () => {
   });
   const [filteredProducts, setFilteredProducts] = useState(Products);
   const [isAgeFilterEnabled, setIsAgeFilterEnabled] = useState(true);
+
+  // Get the query parameters from the URL
+const location = useLocation();
+const queryParams = new URLSearchParams(location.search);
+const categoryFromUrl = queryParams.get('category');
+
+// Use useEffect to apply the category from URL when the page loads
+useEffect(() => {
+  if (categoryFromUrl) {
+    // Update filters state with the category from URL
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      category: [categoryFromUrl], 
+    })); 
+  }
+}, [categoryFromUrl]);
+
+  // Fetch products whenever filters change (URL or form change)
+  useEffect(() => {
+    fetchFilteredProducts(filters);
+  }, [filters]);
+
+  // Fetch filtered products function
+  const fetchFilteredProducts = async (filters) => {
+    try {
+      const response = await axios.post("http://localhost:8000/api/product/filter", filters);
+      setFilteredProducts(response.data);
+    } catch (error) {
+      console.error("Error fetching filtered products", error);
+    }
+  };
+
   // Handle form input changes
  // Handle form input changes (for category, size, etc.)
  const handleChange = (e) => {
@@ -82,16 +115,22 @@ const handleColorSelect = (selectedColor) => {
 
 
 // Handle form submit (send filters to backend)
-const handleSubmit = async (e) => {
-  e.preventDefault();
+// const handleSubmit = async (e) => {
+//   e.preventDefault();
 
-  try {
-    const response = await axios.post("http://localhost:8000/api/product/filter", filters); // Replace with your actual endpoint
-    setFilteredProducts(response.data);
-  } catch (error) {
-    console.error("Error fetching filtered products", error);
-  }
+//   try {
+//     const response = await axios.post("http://localhost:8000/api/product/filter", filters); // Replace with your actual endpoint
+//     setFilteredProducts(response.data);
+//   } catch (error) {
+//     console.error("Error fetching filtered products", error);
+//   }
+// };
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  fetchFilteredProducts(filters); // Use the updated filters
 };
+// no need to handleSubmit be couse evry thing is auto now
   // const productList = Products
   // console.log(productList)
   console.log(filters)
@@ -194,7 +233,7 @@ const handleSubmit = async (e) => {
 
 
 
-            <button type="submit" className="applyFilter" onClick={handleSubmit}>Apply Filters</button>
+            {/* <button type="submit" className="applyFilter" >Apply Filters</button> */}
           </form>
         </div>
         <div className="filtredClothes">

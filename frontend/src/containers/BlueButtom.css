@@ -20,7 +20,7 @@
   gap: 20px;
 }
 .nav__link {
-  padding: 7px;
+  padding: 0px 7px 0px 7px;
 }
 .info_title {
   font-weight: bold;
