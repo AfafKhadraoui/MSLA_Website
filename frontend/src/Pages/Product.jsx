@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
-import { useContext } from "react";
-import {ProductContext} from "../context/ProductContext.jsx";
+// import { useContext } from "react";
+// import {ProductContext} from "../context/ProductContext.jsx";
 import "./CSS/Product.css";
 import Colors from "../components/colors/colors";
 import ProductBox from "../components/productBox/ProductBox.jsx" 
 import SortingBar from "../containers/productPageContainers/SortingBar";
-import man_product1 from "../components/Assets/Man/man_product1.jpg";
-import Products from "../components/Assets/products.js";
+// import Products from "../components/Assets/products.js";
 
 const Product = () => {
   // const { products } = useContext(ProductContext); // Access products from context
@@ -22,7 +21,7 @@ const Product = () => {
     Type: [],
     price: 200
   });
-  const [filteredProducts, setFilteredProducts] = useState(Products);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [isAgeFilterEnabled, setIsAgeFilterEnabled] = useState(true);
 
   // Get the query parameters from the URL
@@ -243,11 +242,12 @@ const handleSubmit = (e) => {
               filteredProducts.map((product) => (
                 <ProductBox
                   key={product.id}
-                  image={product.image }  // Fallback image
-                  ProductName={product.product_name}
-                  oldPrice={product.old_price}
-                  newPrice={product.new_price}
-                  Stock={product.stocked ? 'In Stock' : 'Out of Stock'}
+                  product ={product}
+                  // image={product.image }  // Fallback image
+                  // ProductName={product.product_name}
+                  // oldPrice={product.old_price}
+                  // newPrice={product.new_price}
+                  // Stock={product.stocked ? 'In Stock' : 'Out of Stock'}
                 />
               ))
             ) : (

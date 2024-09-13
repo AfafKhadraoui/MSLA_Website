@@ -10,6 +10,7 @@ import Contact from "./Pages/Contact.jsx";
 import SearchBar from "./containers/SearchBar.jsx";
 import BlueButtom from "./containers/BlueButtom.jsx";
 import Product from "./Pages/Product.jsx";
+import ProductInfo from "./Pages/ProductInfo.jsx";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="about" element={<AboutUs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="/Product" element={<Product />} />
+          <Route path="/product/:id" element={<ProductInfo />} />
         </Route>
       </Routes>
      <BlueButtom />

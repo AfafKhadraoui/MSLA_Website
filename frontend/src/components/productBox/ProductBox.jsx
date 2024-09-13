@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./ProductBox.css";
 import heartIcon from '../Assets/images/heartIcon.svg';
 import heartIcon2 from '../Assets/images/heartIcon2.svg';
 
 
-export default function ProductBox({ key,image, ProductName, oldPrice, newPrice, Stock }) {
+export default function ProductBox({ key, product }) {
   const [isClicked, setIsClicked] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate for navigation
 
   const handleClick = () => {
     setIsClicked(!isClicked);
@@ -24,7 +26,7 @@ export default function ProductBox({ key,image, ProductName, oldPrice, newPrice,
   };
 
   const stockStyle={
-    width: Stock == "In Stock"? '88px':'118px',
+    width: product.stocked == "In Stock"? '88px':'118px',
     height: '33px',
     borderRadius:'20.2px',
     position: 'absolute',
@@ -37,23 +39,26 @@ export default function ProductBox({ key,image, ProductName, oldPrice, newPrice,
     top: '10px',
   }
 
+  const handleProductClick = () => {
+    navigate(`/product/${product._id}`); // Navigate to the product info page with the product ID
+  };
 
   
   return (
-    <button className="Box">
+    <button className="Box" onClick={handleProductClick}>
       <div className="Photo">
         <div className="Stock" style={stockStyle}>
-            {Stock}    
+            {product.stocked ? 'In Stock' : 'Out of Stock'}    
         </div>
         <button style={addToWishStyle} id="addToWish" onClick={handleClick}></button>
-        <img src={image} alt="" id="image" />
+        <img src={product.image} alt="" id="image" />
       </div>
       <div className="botom">
         <div className="info">
-          <p className="ProductName">{ProductName}</p>
+          <p className="ProductName">{product.product_name}</p>
           <p>
-            <span className="oldPrice"><span className="Dolar">$ </span>{oldPrice}</span>
-            <span className="newPrice">$ {newPrice}</span>
+            <span className="oldPrice"><span className="Dolar">$ </span>{product.old_price}</span>
+            <span className="newPrice">$ {product.new_price}</span>
           </p>
         </div>
         <div className="BuingButton">
