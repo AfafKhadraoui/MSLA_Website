@@ -35,7 +35,8 @@ const ShopContextProvider = (props) => {
           })
           .then((response) => {
             if (response.data.success) {
-              setWishlistItems(response?.data?.wishlist);
+              setWishlistItems(response.data.wishlist);
+              console.log("wishiiiii", wishlistItems);
             }
           });
       } catch (err) {
@@ -71,7 +72,7 @@ const ShopContextProvider = (props) => {
           .then((response) => {
             if (response.status === 200) {
               const product = products.find(
-                (product) => product.product_id === id
+                (product) => product?.product_id === id
               );
 
               setWishlistItems((prev) => [...prev, product]);
@@ -85,7 +86,7 @@ const ShopContextProvider = (props) => {
       window.location.href = "/login";
     }
   };
-  const contextValue = { addToWishlist };
+  const contextValue = { addToWishlist, wishlistItems };
   return (
     <ShopContext.Provider value={contextValue}>
       {props.children}

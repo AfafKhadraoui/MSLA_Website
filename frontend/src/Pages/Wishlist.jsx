@@ -9,21 +9,17 @@ const Wishlist = () => {
   console.log("wishlist : ", wishlistItems);
 
   return (
-    <div className="wishlist" style={{ marginTop: "150px" }}>
+    <div className="wishlist" style={{ overflow: "hidden" }}>
       <h2>Wishlist</h2>
-      {wishlistItems?.map((product) => {
-        return (
-          <ProductBox
-            key={product.product_id}
-            product={product}
-            // image={product.image} // Fallback image
-            // ProductName={product.product_name}
-            // oldPrice={product.old_price}
-            // newPrice={product.new_price}
-            // Stock={product.stocked ? "In Stock" : "Out of Stock"}
-          />
-        );
-      })}
+      <div className="wishlistItems">
+        {wishlistItems.length > 0 ? (
+          wishlistItems.map((product) => (
+            <ProductBox key={product?.product_id} product={product} />
+          ))
+        ) : (
+          <></>
+        )}
+      </div>
     </div>
   );
 };
