@@ -21,11 +21,11 @@
 
 @font-face {
     font-family: 'Graphie ExtraBold';
-    src: url('../../fonts/Graphie-ExtraBold.otf')
+    src: url('../CSS/fonts/Graphie-ExtraBold.otf')
 }
 @font-face {
     font-family: 'HelveticaNeueBold';
-    src: url('../../fonts/HelveticaNeueBold.otf')
+    src: url('../CSS/fonts/HelveticaNeueBold.otf')
 }
 .title{
     font-size: 5rem;

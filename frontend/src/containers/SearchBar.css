@@ -56,7 +56,7 @@
   }
   @font-face {
     font-family: "Playfair Display";
-    src: url('../fonts/PlayfairDisplay-Bold.ttf') ;
+    src: url('../Pages/CSS/fonts/PlayfairDisplay-Bold.ttf') ;
   }
   .template img{
     width: 300px;

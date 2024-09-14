@@ -1,58 +1,71 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom"; // Import useParams to get the product ID from the URL
+import { useParams } from "react-router-dom";
 import "./CSS/ProductInfo.css";
 import { ShopContext } from "../context/ShopContext";
+import { useCart } from "../context/CartContext";
 
 const ProductInfo = () => {
   const { addToWishlist } = useContext(ShopContext);
-  const { id } = useParams(); // Get the product ID from the URL
-  const [product, setProduct] = useState(null); // Initialize product state
-  const [quantity, setQuantity] = useState(1); // Initialize quantity state
+  const { addToCart } = useCart();
+  const { id } = useParams();
+  const [product, setProduct] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+  const [selectedSize, setSelectedSize] = useState("");
+  const [selectedColor, setSelectedColor] = useState("");
 
-  // Fetch the product data by ID when the component loads
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:8000/api/product/${id}`
-        ); // Fetch product data by ID
-        setProduct(response.data); // Set the product data
+        const response = await axios.get(`http://localhost:8000/api/product/${id}`);
+        setProduct(response.data);
       } catch (error) {
         console.error("Error fetching product", error);
       }
     };
 
-    fetchProduct(); // Call the fetchProduct function
+    fetchProduct();
   }, [id]);
 
-  // If product is still loading
   if (!product) {
     return <div>Loading product details...</div>;
   }
 
-  // Handle increasing the quantity
   const increaseQuantity = () => {
     if (quantity < product.quantity) {
-      // Ensure we do not exceed available stock
       setQuantity(quantity + 1);
     }
   };
 
-  // Handle decreasing the quantity
   const decreaseQuantity = () => {
     if (quantity > 1) {
-      // Ensure the minimum quantity is 1
       setQuantity(quantity - 1);
     }
+  };
+
+  const handleAddToWishlist = () => {
+    if (!selectedSize || !selectedColor) {
+      alert("Please select a size and color before adding to the wishlist.");
+      return;
+    }
+    addToWishlist(product.product_id);
+  };
+
+  const handleAddToBasket = () => {
+    if (!selectedSize || !selectedColor) {
+      alert("Please select a size and color before adding to the basket.");
+      return;
+    }
+    addToCart(product, selectedColor, selectedSize, quantity); // Pass quantity if needed
+    alert(`${product.product_name} has been added to your basket!`);
   };
 
   return (
     <div className="body">
       <ul className="pages">
-        <li> Home > </li>
-        <li> Clothing > </li>
-        <li> {product.product_name}</li> {/* Use dynamic product name */}
+        <li> Home </li>
+        <li> Clothing </li>
+        <li> {product.product_name}</li>
       </ul>
 
       <div className="midle">
@@ -68,16 +81,30 @@ const ProductInfo = () => {
             <span className="stock"> {product.quantity} left </span>
           </div>
           <label htmlFor="size">Size</label>
-          <select name="size" id="size" className="Sselecter">
-            {product.size.map((s, index) => (
+          <select
+            name="size"
+            id="size"
+            className="Sselecter"
+            value={selectedSize}
+            onChange={(e) => setSelectedSize(e.target.value)}
+          >
+            <option value="">Select size</option>
+            {product.size && product.size.map((s, index) => (
               <option key={index} value={s}>
                 {s}
               </option>
             ))}
           </select>
           <label htmlFor="color">Colors</label>
-          <select name="color" id="color" className="Cselect">
-            {product.colors.map((c, index) => (
+          <select
+            name="color"
+            id="color"
+            className="Cselect"
+            value={selectedColor}
+            onChange={(e) => setSelectedColor(e.target.value)}
+          >
+            <option value="">Select color</option>
+            {product.colors && product.colors.map((c, index) => (
               <option key={index} value={c}>
                 {c}
               </option>
@@ -95,16 +122,13 @@ const ProductInfo = () => {
                   +
                 </button>
               </div>
-              <button
-                className="W"
-                onClick={() => {
-                  addToWishlist(product.product_id);
-                }}
-              >
+              <button className="W" onClick={handleAddToWishlist}>
                 Add To Wish List
               </button>
             </div>
-            <button className="AddToBasket">Add to Basket</button>
+            <button className="AddToBasket" onClick={handleAddToBasket}>
+              Add to Basket
+            </button>
           </div>
         </div>
       </div>

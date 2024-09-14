@@ -26,7 +26,7 @@ padding: 0px 44%;
  
 }@font-face {
     font-family: "PlayfairDisplay";
-    src: url("../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf");
+    src: url("../Pages/CSS/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf");
 }
 .comment p{
     color:white;

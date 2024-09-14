@@ -13,11 +13,11 @@
 
 @font-face {
   font-family: "PlayfairDisplay";
-  src: url("../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf");
+  src: url("../Pages/CSS/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: "Poppins";
-  src: url("../fonts/Poppins-Bold.ttf");
+  src: url("../Pages/CSS/fonts/Poppins-Bold.ttf");
 }
 .Category {
   font-weight: 500;

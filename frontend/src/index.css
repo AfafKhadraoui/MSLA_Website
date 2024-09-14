@@ -6,19 +6,19 @@
 }
 @font-face {
   font-family: "Graphie ExtraBold";
-  src: url("./fonts/Graphie-ExtraBold.otf");
+  src: url("./Pages/CSS/fonts/Graphie-ExtraBold.otf");
 }
 @font-face {
   font-family: "HelveticaNeueBold";
-  src: url("./fonts/HelveticaNeueBold.otf");
+  src: url("./Pages/CSS/fonts/HelveticaNeueBold.otf");
 }
 @font-face {
   font-family: "PlayfairDisplay";
-  src: url("./fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf");
+  src: url("./Pages/CSS/fonts/PlayfairDisplay-Black.ttf");
 }
 @font-face {
   font-family: "Poppins";
-  src: url("./fonts/Poppins-Bold.ttf");
+  src: url("./Pages/CSS/fonts/Poppins-Bold.ttf");
 }
 
 /* You can use the fonts from anywhere just by using the font family name mentioned here */
@@ -49,5 +49,17 @@ code {
 
 @font-face {
   font-family: "Poppins-Regular";
-  src: url("../src/fonts/Poppins-Regular.ttf");
+  src: url("./Pages/CSS/fonts/Poppins-Regular.ttf");
 }
+
+/* Add padding or margin to the top of the main content to ensure it's not covered */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional: Adjust padding for specific content containers */
+.main-content {
+  padding-top: 6vh; /* Same as Navbar height */
+}
+
