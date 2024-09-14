@@ -183,7 +183,7 @@ const LoginSignup = () => {
                 I agree to the <a href="">Terms & Conditions</a>
               </label>
             </div>
-            <button type="submit">{isSignup ? <>Signup</> : <>Login</>}</button>
+            <button   className="field-checkbox-button "type="submit">{isSignup ? <>Signup</> : <>Login</>}</button>
           </form>
         </div>
       </div>

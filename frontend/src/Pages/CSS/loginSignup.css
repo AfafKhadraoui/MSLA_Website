@@ -1,15 +1,13 @@
-* {
-  overflow-x: hidden;
-}
 .LoginSignup-container {
   margin: 150px auto;
   width: 80%;
 }
 .LoginSignup-container h1 {
   text-align: center;
-  font-family: 'HelveticaNeueBold';
+  font-family: "HelveticaNeueBold";
   font-size: 4rem;
 }
+
 .loginSignup {
   margin-top: 50px;
   display: flex;
@@ -56,6 +54,11 @@
   align-items: flex-start;
   gap: 5px;
 }
+.field p{
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 500;
+}
 .field input,
 .loginSignup-fields-items button {
   width: 80%;
@@ -82,7 +85,7 @@
   font-weight: 600;
   color: var(--MAIN-BLUE);
 }
-button {
+.field-checkbox-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,9 +103,10 @@ button {
 .field span {
   font-weight: 700;
   cursor: pointer;
+  white-space: nowrap;
 }
 
-p {
+.loginSignup-fields-Text p {
   width: 90%;
   white-space: nowrap;
 }

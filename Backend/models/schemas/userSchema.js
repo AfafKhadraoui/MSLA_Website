@@ -9,6 +9,7 @@ const userSchema = new Schema({
     email: { type: String, required: true, unique: true },
     passwrd: { type: String, required: true, unique: false },
     orders: { type: mongoose.Schema.Types.ObjectId, ref: "Order" },
+    wishlist: { type: Array }
 
 })
 userSchema.index({ first_name: 1, last_name: 1 }, { unique: true });

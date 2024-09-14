@@ -1,29 +1,30 @@
 import React, { useContext } from "react";
 import "./CSS/Wishlist.css";
 import { ShopContext } from "../context/ShopContext";
-// import Element from "../components/Element/Element";
+import "./CSS/ProductInfo.css";
+import ProductBox from "../components/productBox/ProductBox";
 
 const Wishlist = () => {
   const { wishlistItems } = useContext(ShopContext);
-  return (
-    <div className="wishlist">
-      <h2>Wishlist</h2>
-      <div className="wishlist-items">
-        {wishlistItems.map((item) => {
-          return
-          // (<Element
-              // key={item.product_id}
-              // name={item.product_name}
-              // image={item.image}
-              // new_price={item.new_price}
-              // old_price={item.old_price}
-              // product_id={item.product_id}
-            // />)
+  console.log("wishlist : ", wishlistItems);
 
-        })}
-      </div>
+  return (
+    <div className="wishlist" style={{ marginTop: "150px" }}>
+      <h2>Wishlist</h2>
+      {wishlistItems?.map((product) => {
+        return (
+          <ProductBox
+            key={product.product_id}
+            product={product}
+            // image={product.image} // Fallback image
+            // ProductName={product.product_name}
+            // oldPrice={product.old_price}
+            // newPrice={product.new_price}
+            // Stock={product.stocked ? "In Stock" : "Out of Stock"}
+          />
+        );
+      })}
     </div>
-   
   );
 };
 

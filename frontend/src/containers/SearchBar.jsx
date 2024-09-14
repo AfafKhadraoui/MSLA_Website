@@ -37,15 +37,15 @@ function SearchBar() {
           </div>
           <div className="pages">
             <Link to={"/login"}>
-            <i class="fa fa-user login-icon"></i>
+              <i class="fa fa-user login-icon"></i>
             </Link>
 
             <a href="../Pages/Cart">
               <i class="fa fa-shopping-cart "></i>
             </a>
-            <a href="../Pages/Wihshlist">
+            <Link to={"/wishlist"}>
               <i class="fa fa-heart "></i>
-            </a>
+            </Link>
           </div>
         </div>
         <Navbar />
