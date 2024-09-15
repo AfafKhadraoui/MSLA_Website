@@ -9,7 +9,7 @@
 }
 .buttom_head {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   padding: 50px;
   gap: 30px;
   line-height: 3rem;
@@ -101,4 +101,8 @@
 .buttom_foot {
   padding: 0;
   margin-top: 0;
+}
+.Store_hours_details p{
+  color: white;
+  font-size: 15px;
 }

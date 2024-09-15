@@ -1,5 +1,5 @@
 import "./HomeTop.css";
-import home_pic from "../components/Assets/images/pic2.png";
+import home_pic from "../components/Assets/images/Home.png";
 
 function HomeTop() {
   function goToPage() {

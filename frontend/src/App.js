@@ -10,6 +10,7 @@ import SearchBar from "./containers/SearchBar.jsx";
 import BlueButtom from "./containers/BlueButtom.jsx";
 import Product from "./Pages/Product.jsx";
 import ProductInfo from "./Pages/ProductInfo.jsx";
+import Results from './Pages/Results.jsx'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="about" element={<AboutUs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="product" element={<Product />} />
+          <Route path="Results" element={<Results />} />
           <Route path="product/:id" element={<ProductInfo />} />
         </Routes>
       </div>
