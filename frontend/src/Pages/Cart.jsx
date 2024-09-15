@@ -1,37 +1,68 @@
-import React, { useEffect } from 'react';
-import { useCart } from '../context/CartContext.js'; 
-import CartItem from './CartItem.js'; 
+import React, { useState } from 'react';
+import { useCart } from '../context/CartContext.js';
+import CartItem from './CartItem.js';
 import './CSS/Cart.css';
 
 const Cart = () => {
-  const { cart, removeFromCart, resetCart } = useCart();
+  const { cart, resetCart } = useCart();
+  const [discount, setDiscount] = useState(0);
 
-  useEffect(() => {
-    // Debugging: Log the cart state to ensure it's updated
-    console.log('Cart:', cart);
-  }, [cart]);
-
-  // Calculate total price of items in the cart
-  const calculateTotal = () => {
-    return cart.reduce((total, item) => total + (item.new_price * item.quantity), 0).toFixed(2);
+  const applyCoupon = () => {
+    // For this example, applying a static 10% discount
+    setDiscount(0.05); // 5% discount
   };
 
+  const totalAmount = cart.reduce((acc, item) => acc + item.new_price * item.quantity, 0);
+  const discountedAmount = totalAmount * (1 - discount);
+
   return (
-    <div className='cart'>
-      <h2>What's in your cart?</h2>
-      <button onClick={resetCart} className="reset-button">Reset Cart</button>
-      {cart.length > 0 ? (
-        <>
-          {cart.map(item => (
-            <CartItem key={item._id} item={item} removeFromCart={removeFromCart} />
-          ))}
-          <div className="cart-total">
-            <h3>Total: ${calculateTotal()}</h3>
+    <div className="cart-page-container">
+      {/* Cart List on the left */}
+      <div className="cart-container">
+        <div className="cart-header">
+          <h2>What's in your cart :</h2>
+          {cart.length > 0 && (
+            <button className="reset-button" onClick={resetCart}>
+              Reset Cart
+            </button>
+          )}
+        </div>
+        <div className="cart-list">
+          <div className="cart-list-header">
+            <div className="header-item">Product</div>
+            <div className="header-item">Price</div>
+            <div className="header-item">Quantity</div>
+            <div className="header-item">Total</div>
+            <div className="header-item">Remove</div>
           </div>
-        </>
-      ) : (
-        <p>Your cart is empty</p>
-      )}
+          <div className="cart-list-body">
+            {cart.length > 0 ? (
+              cart.map(item => <CartItem key={item._id} item={item} />)
+            ) : (
+              <div className="empty-cart">
+                <p>Your cart is empty</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Order Summary on the right */}
+      <div className="order-summary-container">
+        <h3>Order Summary</h3>
+        <p>Total Items: {cart.reduce((acc, item) => acc + item.quantity, 0)}</p>
+        <p className="total-amount">
+          Amount before discount: ${totalAmount.toFixed(2)}
+        </p>
+        <div className="coupon-container">
+          <input type="text" placeholder="Enter coupon code" className="coupon-input" />
+          <button className="apply-coupon" onClick={applyCoupon}>Apply</button>
+        </div>
+        <p className="discounted-amount">
+          Final Price: ${discountedAmount.toFixed(2)}
+        </p>
+        <button className="purchase-button">Proceed to Checkout</button>
+      </div>
     </div>
   );
 };
