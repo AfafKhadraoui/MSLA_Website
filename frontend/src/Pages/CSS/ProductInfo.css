@@ -94,11 +94,11 @@
 }
 
 .Sselecter{
-    width: 100px;
+    width: 160px;
 }
 
 .Cselect{
-    width: 120px;
+    width: 165px;
 }
 
 .buttons{
@@ -139,8 +139,8 @@
     margin-left: 5px;
     margin-right: 5px;
     color: #353753;
-    background-color: white;
     border: none;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .W{
@@ -154,11 +154,14 @@
 }
 
 .AddToBasket{
+    background-color: #353753;
     height: 60px;
     width: 95%;
     border: none;
     border-radius: 28px;
     font-size: 22px;
+    font-weight: bold;
+    color: white;
 }
 
 .description {

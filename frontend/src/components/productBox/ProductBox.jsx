@@ -22,12 +22,12 @@ export default function ProductBox({ key, product }) {
     backgroundImage: isClicked ? `url(${heartIcon2})` : `url(${heartIcon})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    borderRadius: "0% 0% 0% 20%",
+    borderRadius: "0% 20% 0% 20%",
     border: "none",
   };
-
-  const stockStyle = {
-    width: product.stocked == "In Stock" ? "88px" : "118px",
+  
+   const stockStyle = {
+    width: product.stocked ? "70px" : "88px",
     height: "33px",
     borderRadius: "20.2px",
     position: "absolute",
@@ -38,6 +38,7 @@ export default function ProductBox({ key, product }) {
     justifyContent: "center",
     left: "10px",
     top: "10px",
+    fontSize: "14px"
   };
 
   const handleProductClick = () => {
