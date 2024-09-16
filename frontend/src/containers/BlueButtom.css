@@ -1,47 +1,56 @@
 .Buttom_container {
   width: 100%;
-  height: 27.5em;
   background-color: #353753;
   margin-top: 10px;
   color: white;
   transition: 0.5s ease-in-out;
   margin-bottom: 0;
+  padding-bottom: 20px; /* Add padding to avoid text sticking to the bottom */
+  
+
 }
+
 .buttom_head {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   padding: 50px;
   gap: 30px;
   line-height: 3rem;
 }
+
 .links {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 400px;
 }
+
 .nav__link {
-  padding: 0px 7px 0px 7px;
+  padding: 0px 7px;
 }
+
 .info_title {
   font-weight: bold;
   text-align: left;
 }
+
 .info_content {
-   font-size:15px;
-    text-align: left;
+  font-size: 15px;
+  text-align: left;
 }
+
 .Store_hours_details {
   display: flex;
   justify-content: space-between;
   gap: 10px;
   font-weight: lighter;
-  
+  margin-right: 100px;
 }
-.Store_hours_details p{
-   
-    font-weight: 1px;
-    
-  }
+
+.Store_hours_details p {
+  font-weight: 1px;
+}
+
 .logo {
   font-size: 30px;
   font-weight: 900;
@@ -56,53 +65,107 @@
   display: flex;
   flex-direction: row;
   gap: 15px;
-  
 }
+
 .media i:hover {
   font-size: 40px;
-  gap: 10px;
 }
-@media  screen and (max-width: 800px) {
+
+@media screen and (max-width: 800px) {
   .buttom_head {
     padding: 50px 10px;
   }
-  .Buttom_container {
-    height: 29em;
-    transition: 0.5s ease-in-out;
-  }
 }
-@media  screen and (max-width: 700px) {
+
+@media screen and (max-width: 700px) {
   .buttom_head {
     padding: 50px 10px;
   }
+
   body {
     font-size: small;
   }
+  
   .Buttom_container {
+    width: 100%; /* Ensure it stays within viewport on small screens */
     margin-top: 0px;
-    height: 32em;
-    width: 130%;
     transition: 0.5s ease-in-out;
   }
 }
+
 .stor_hours_title {
   font-size: large;
   font-weight: bold;
   text-align: center;
 }
+
 .buttom_foot ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .buttom_foot ul li {
   padding: 0px 10px;
 }
+
 .buttom_foot {
   padding: 0;
   margin-top: 0;
 }
-.Store_hours_details p{
+
+.Store_hours_details p {
   color: white;
   font-size: 15px;
+}
+
+.Store_hours {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.stor_hours_title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left; /* Align the title to the left for consistency */
+  margin-bottom: 10px; /* Add space between title and the details */
+  color: white;
+}
+
+.Store_hours_details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  padding: 5px 0; /* Add some vertical padding for spacing between items */
+  border-bottom: 1px solid #ffffff44; /* Add a subtle line to separate items */
+  color: white;
+  width: 200px;
+}
+
+.Store_hours_details p {
+  margin: 0; /* Remove default margins to align text properly */
+  font-weight: 400; /* Use a consistent font weight */
+}
+
+.Store_hours_details:last-child {
+  border-bottom: none; /* Remove the bottom border for the last item */
+}
+
+@media screen and (max-width: 700px) {
+  .Store_hours {
+    gap: 10px; /* Adjust the gap between items for smaller screens */
+  }
+
+  .Store_hours_details {
+    font-size: 14px; /* Slightly reduce font size for smaller screens */
+    padding: 3px 0;
+  }
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 100px;
 }

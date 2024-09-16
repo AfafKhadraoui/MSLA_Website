@@ -20,7 +20,7 @@ const Cart = () => {
       {/* Cart List on the left */}
       <div className="cart-container">
         <div className="cart-header">
-          <h2>What's in your cart :</h2>
+          <h2>What's in your cart :)</h2>
           {cart.length > 0 && (
             <button className="reset-button" onClick={resetCart}>
               Reset Cart

@@ -13,6 +13,7 @@ const ProductInfo = () => {
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState("");
   const [selectedColor, setSelectedColor] = useState("");
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -21,51 +22,45 @@ const ProductInfo = () => {
         setProduct(response.data);
       } catch (error) {
         console.error("Error fetching product", error);
+        setError(true);
       }
     };
 
     fetchProduct();
   }, [id]);
 
+  if (error) {
+    return <div>Error loading product details. Please try again later.</div>;
+  }
+
   if (!product) {
     return <div>Loading product details...</div>;
   }
 
-  const increaseQuantity = () => {
-    if (quantity < product.quantity) {
-      setQuantity(quantity + 1);
-    }
-  };
-
-  const decreaseQuantity = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
+  const increaseQuantity = () => setQuantity((prevQuantity) => Math.min(prevQuantity + 1, product.quantity));
+  const decreaseQuantity = () => setQuantity((prevQuantity) => Math.max(prevQuantity - 1, 1));
 
   const handleAddToWishlist = () => {
-    if (!selectedSize || !selectedColor) {
-      alert("Please select a size and color before adding to the wishlist.");
-      return;
-    }
     addToWishlist(product.product_id);
+    alert(`${product.product_name} has been added to your wishlist!`);
   };
+  
 
   const handleAddToBasket = () => {
     if (!selectedSize || !selectedColor) {
       alert("Please select a size and color before adding to the basket.");
       return;
     }
-    addToCart(product, selectedColor, selectedSize, quantity); // Pass quantity if needed
+    addToCart(product, selectedColor, selectedSize, quantity);
     alert(`${product.product_name} has been added to your basket!`);
   };
 
   return (
     <div className="body">
       <ul className="pages">
-        <li> Home </li>
-        <li> Clothing </li>
-        <li> {product.product_name}</li>
+        <li>Home</li>
+        <li>Clothing</li>
+        <li>{product.product_name}</li>
       </ul>
 
       <div className="midle">
@@ -76,10 +71,11 @@ const ProductInfo = () => {
         <div className="productInfo">
           <p>{product.product_name}</p>
           <div className="PriceAndStock">
-            <span className="oldprice"> ${product.old_price} </span>
+            <span className="oldprice">${product.old_price}</span>
             <span className="newprice">${product.new_price}</span>
-            <span className="stock"> {product.quantity} left </span>
+            <span className="stock">{product.quantity} left</span>
           </div>
+
           <label htmlFor="size">Size</label>
           <select
             name="size"
@@ -89,12 +85,13 @@ const ProductInfo = () => {
             onChange={(e) => setSelectedSize(e.target.value)}
           >
             <option value="">Select size</option>
-            {product.size && product.size.map((s, index) => (
+            {product.size.map((s, index) => (
               <option key={index} value={s}>
                 {s}
               </option>
             ))}
           </select>
+
           <label htmlFor="color">Colors</label>
           <select
             name="color"
@@ -104,34 +101,35 @@ const ProductInfo = () => {
             onChange={(e) => setSelectedColor(e.target.value)}
           >
             <option value="">Select color</option>
-            {product.colors && product.colors.map((c, index) => (
+            {product.colors.map((c, index) => (
               <option key={index} value={c}>
                 {c}
               </option>
             ))}
           </select>
+
           <div className="buttons">
             <div className="QandW">
               <div className="quntity">
-                <button className="Q" onClick={decreaseQuantity}>
-                  {" "}
-                  -{" "}
-                </button>
+                <button className="Q" onClick={decreaseQuantity}>-</button>
                 <span>{quantity}</span>
-                <button className="Q" onClick={increaseQuantity}>
-                  +
-                </button>
+                <button className="Q" onClick={increaseQuantity}>+</button>
               </div>
               <button className="W" onClick={handleAddToWishlist}>
                 Add To Wish List
               </button>
             </div>
-            <button className="AddToBasket" onClick={handleAddToBasket}>
+            <button
+              className="AddToBasket"
+              onClick={handleAddToBasket}
+              disabled={product.quantity === 0}
+            >
               Add to Basket
             </button>
           </div>
         </div>
       </div>
+
       <div className="description">
         <p>Description</p>
         <span className="dis">{product.description}</span>

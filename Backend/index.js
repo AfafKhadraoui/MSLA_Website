@@ -16,4 +16,4 @@ mongoose.connect(CONFIG.mongo_url).then((db) => {
     app.use('/api', api({ config: CONFIG, db }))
 
     app.listen(PORT, () => console.log(`Server is running in ${PORT}`))
-}).catch((err) => { console.log(err, "Eroor occured") })
+}).catch((err) => { console.log(err, "Error occured") })
