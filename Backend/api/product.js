@@ -55,7 +55,7 @@ export default ({ config, db }) => {
     try {
       let Products = await productCollection.find({});
       if (Products.length === 0) {
-        res.status(404).send({ message: "No products found" });
+        return res.status(404).send({ message: "No products found" });
       }
       res.status(200).send({ Products });
     } catch (err) {

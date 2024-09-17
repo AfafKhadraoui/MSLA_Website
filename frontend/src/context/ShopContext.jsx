@@ -1,10 +1,15 @@
 import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import CONFIG from "../config.json";
+import photo from "../components/Assets/images/product.png";
+import login from "../components/Assets/images/login.png";
 
 export const ShopContext = createContext(null);
 
 const ShopContextProvider = (props) => {
+  const [modalMessage, setModalMessage] = useState(""); // Modal message state
+  const [modalImage, setModalImage] = useState(photo);
+  const [modalBtn, setModalBtn] = useState("");
   const [products, setProducts] = useState([]);
   const [wishlistItems, setWishlistItems] = useState([]);
 
@@ -36,7 +41,6 @@ const ShopContextProvider = (props) => {
           .then((response) => {
             if (response.data.success) {
               setWishlistItems(response.data.wishlist);
-              console.log("wishiiiii", wishlistItems);
             }
           });
       } catch (err) {
@@ -76,17 +80,30 @@ const ShopContextProvider = (props) => {
               );
 
               setWishlistItems((prev) => [...prev, product]);
+              setModalImage(product?.image || photo);
+              setModalMessage("Product added to Wishlist");
+              setModalBtn("wishlist");
             }
           });
       } catch (err) {
-        alert(err?.response?.data?.message);
+        // alert(err?.response?.data?.message);
+        setModalMessage(err?.response?.data?.message);
       }
     } else {
-      alert("Please log in to add items to your wishlist");
-      window.location.href = "/login";
+      setModalMessage("Please log in to add items to your wishlist");
+      setModalImage(login);
+      setModalBtn("login");
+      // alert("Please log in to add items to your wishlist");
+      // window.location.href = "/login";
     }
   };
-  const contextValue = { addToWishlist, wishlistItems };
+  const contextValue = {
+    addToWishlist,
+    wishlistItems,
+    modalImage,
+    modalMessage,
+    modalBtn,
+  };
   return (
     <ShopContext.Provider value={contextValue}>
       {props.children}
