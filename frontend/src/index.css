@@ -31,6 +31,7 @@
 
 :root{
   --MAIN-BLUE:#353753;
+  --Main-Pink: linear-gradient(to top, #fcf1f3, rgb(254, 186, 197));
 }
 body {
   color: #353753;

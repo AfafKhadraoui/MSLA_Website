@@ -4,8 +4,11 @@ import "./ProductBox.css";
 import heartIcon from "../Assets/images/heartIcon.svg";
 import heartIcon2 from "../Assets/images/heartIcon2.svg";
 import { ShopContext } from "../../context/ShopContext";
+import WishlistModel from "../Modals/Wishlist/WishlistModel";
 
 export default function ProductBox({ key, product }) {
+  const [openModal, setOpenModal] = useState(false);
+
   const { addToWishlist } = useContext(ShopContext);
   const [isClicked, setIsClicked] = useState(false);
   const navigate = useNavigate(); // Initialize useNavigate for navigation
@@ -25,8 +28,8 @@ export default function ProductBox({ key, product }) {
     borderRadius: "0% 20% 0% 20%",
     border: "none",
   };
-  
-   const stockStyle = {
+
+  const stockStyle = {
     width: product.stocked ? "70px" : "88px",
     height: "33px",
     borderRadius: "20.2px",
@@ -38,7 +41,7 @@ export default function ProductBox({ key, product }) {
     justifyContent: "center",
     left: "10px",
     top: "10px",
-    fontSize: "14px"
+    fontSize: "14px",
   };
 
   const handleProductClick = () => {
@@ -54,10 +57,18 @@ export default function ProductBox({ key, product }) {
         <button
           style={addToWishStyle}
           id="addToWish"
-          onClick={() => {
+          onClick={(e) => {
+            e.stopPropagation();
+            setOpenModal(true);
             addToWishlist(product.product_id);
           }}
         ></button>
+        <WishlistModel
+          open={openModal}
+          image={product.image}
+          message="Product added to Wishlist"
+          onClose={() => setOpenModal(false)}
+        />
         <img src={product.image} alt="" id="image" />
       </div>
       <div className="botom">

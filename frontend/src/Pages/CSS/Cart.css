@@ -1,6 +1,7 @@
 /* General styles */
 body {
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  /* I comented it because it's affecting all the fonts of the website */
   background-color: #fff;
   color: #353753;
 }
