@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import CONFIG from "../config.json";
 import "./CSS/loginSignup.css";
 import signupPhoto from "../components/Assets/images/login.png";
-// import logo from "./CSS/logo2 .png";
 
 const LoginSignup = () => {
   const [state, setState] = useState("Log In");
@@ -16,29 +16,30 @@ const LoginSignup = () => {
     error: null,
   });
 
+  const navigate = useNavigate(); // Use the useNavigate hook for redirection
+
   const onChangeHandler = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
+
   const signup = async (e) => {
+    e.preventDefault(); // Prevent default form submission
     try {
-      await axios
-        .post(`${CONFIG.api_server}/api/user/addUser`, formData, {
-          headers: { "Content-Type": "application/json" },
-        })
-        .then((response) => {
-          console.log(response);
-          if (response.data.success) {
-            setFormData({ user: response.data.users, error: null });
-            localStorage.setItem("auth-token", response.data.token);
-            window.location.href = "/";
-          } else {
-            alert(response.data.message);
-            setFormData((prev) => ({ ...prev, error: response.data.message }));
-          }
-        });
+      const response = await axios.post(`${CONFIG.api_server}/api/user/addUser`, formData, {
+        headers: { "Content-Type": "application/json" },
+      });
+      console.log(response);
+      if (response.data.success) {
+        setFormData({ user: response.data.users, error: null });
+        localStorage.setItem("auth-token", response.data.token);
+        navigate("/"); // Use navigate for redirection
+      } else {
+        alert(response.data.message);
+        setFormData((prev) => ({ ...prev, error: response.data.message }));
+      }
     } catch (err) {
       alert(err.response ? err.response.data.message : "Error occurred");
       setFormData((prev) => ({
@@ -47,26 +48,26 @@ const LoginSignup = () => {
       }));
     }
   };
+
   const login = async (e) => {
-    console.log("loged in successfully");
+    e.preventDefault(); // Prevent default form submission
+    console.log("Logged in successfully");
     try {
-      await axios
-        .post(`${CONFIG.api_server}/api/user/login`, formData, {
-          headers: { "Content-Type": "application/json" },
-        })
-        .then((response) => {
-          console.log(response);
-          if (response.data.success) {
-            localStorage.setItem("auth-token", response.data.token);
-            window.location.href = "/";
-          } else {
-            alert(response.data.message);
-          }
-        });
+      const response = await axios.post(`${CONFIG.api_server}/api/user/login`, formData, {
+        headers: { "Content-Type": "application/json" },
+      });
+      console.log(response);
+      if (response.data.success) {
+        localStorage.setItem("auth-token", response.data.token);
+        navigate("/"); // Use navigate for redirection
+      } else {
+        alert(response.data.message);
+      }
     } catch (err) {
       alert(err.response ? err.response.data.message : "Error occurred");
     }
   };
+
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent default form submission
     if (isSignup) {
@@ -75,6 +76,7 @@ const LoginSignup = () => {
       login(e);
     }
   };
+
   return (
     <div className="LoginSignup-container">
       <h1>{state}</h1>
@@ -90,7 +92,6 @@ const LoginSignup = () => {
           >
             <div className="loginSignup-fields-Text">
               {isSignup ? <h2>Create New Account</h2> : <h2>User Login</h2>}
-
               <p>Please enter details</p>
             </div>
             <div className="field">
@@ -107,14 +108,12 @@ const LoginSignup = () => {
                     onChange={onChangeHandler}
                   />
                 </>
-              ) : (
-                <></>
-              )}
+              ) : null}
             </div>
             <div className="field">
               {isSignup ? (
                 <>
-                  <label htmlFor="fname">Last Name *</label>
+                  <label htmlFor="lname">Last Name *</label>
                   <input
                     type="text"
                     id="lname"
@@ -124,9 +123,7 @@ const LoginSignup = () => {
                     required
                   />
                 </>
-              ) : (
-                <></>
-              )}
+              ) : null}
             </div>
             <div className="field">
               <label htmlFor="email">Email Address *</label>
@@ -145,18 +142,18 @@ const LoginSignup = () => {
                 type="password"
                 id="passwd"
                 name="passwrd"
-                minLength={"8"}
+                minLength="8"
                 placeholder="Enter your password"
                 onChange={onChangeHandler}
                 required
               />
               {isSignup ? (
                 <p>
-                  Already have an accocunt ?
+                  Already have an account?
                   <span
                     onClick={() => {
                       setState("Log In");
-                      window.scrollTo(200, 200);
+                      window.scrollTo(0, 0);
                     }}
                   >
                     log in
@@ -164,7 +161,7 @@ const LoginSignup = () => {
                 </p>
               ) : (
                 <p>
-                  Create an account ?
+                  Create an account?
                   <span
                     onClick={() => {
                       setState("Sign Up");
@@ -178,12 +175,14 @@ const LoginSignup = () => {
             </div>
 
             <div className="field-checkbox">
-              <input type="checkbox" id="check" required="" />
+              <input type="checkbox" id="check" required />
               <label htmlFor="check">
-                I agree to the <a href="">Terms & Conditions</a>
+                I agree to the <a href="#">Terms & Conditions</a>
               </label>
             </div>
-            <button   className="field-checkbox-button "type="submit">{isSignup ? <>Signup</> : <>Login</>}</button>
+            <button className="field-checkbox-button" type="submit">
+              {isSignup ? "Signup" : "Login"}
+            </button>
           </form>
         </div>
       </div>

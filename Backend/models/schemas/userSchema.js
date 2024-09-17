@@ -9,16 +9,26 @@ const userSchema = new Schema({
     email: { type: String, required: true, unique: true },
     passwrd: { type: String, required: true, unique: false },
     orders: { type: mongoose.Schema.Types.ObjectId, ref: "Order" },
-    wishlist: { type: Array }
+    wishlist: { type: Array },
+    cart: [
+        {
+            product_id: { type: Number, required: true },
+            quantity: { type: Number, required: true },
+            size: { type: String },
+            color: { type: String }
+        }
+    ]
+});
 
-})
+// Indexing
 userSchema.index({ first_name: 1, last_name: 1 }, { unique: true });
 
-
+// Virtual for username
 userSchema.virtual('username').get(function () {
     return `${this.first_name}_${this.last_name}`
-})
+});
 
-userSchema.set('toJSON', { virtuals: true })
-userSchema.set('toObject', { virtuals: true })
+userSchema.set('toJSON', { virtuals: true });
+userSchema.set('toObject', { virtuals: true });
+
 export default userSchema;
