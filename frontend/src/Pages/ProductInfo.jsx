@@ -4,9 +4,12 @@ import { useParams } from "react-router-dom";
 import "./CSS/ProductInfo.css";
 import { ShopContext } from "../context/ShopContext";
 import { useCart } from "../context/CartContext";
+import WishlistModel from "../components/Modals/Wishlist/WishlistModel";
 
 const ProductInfo = () => {
   const { addToWishlist } = useContext(ShopContext);
+  const [openModal, setOpenModal] = useState(false);
+
   const { addToCart } = useCart();
   const { id } = useParams();
   const [product, setProduct] = useState(null);
@@ -18,7 +21,9 @@ const ProductInfo = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/product/${id}`);
+        const response = await axios.get(
+          `http://localhost:8000/api/product/${id}`
+        );
         setProduct(response.data);
       } catch (error) {
         console.error("Error fetching product", error);
@@ -37,14 +42,15 @@ const ProductInfo = () => {
     return <div>Loading product details...</div>;
   }
 
-  const increaseQuantity = () => setQuantity((prevQuantity) => Math.min(prevQuantity + 1, product.quantity));
-  const decreaseQuantity = () => setQuantity((prevQuantity) => Math.max(prevQuantity - 1, 1));
+  const increaseQuantity = () =>
+    setQuantity((prevQuantity) => Math.min(prevQuantity + 1, product.quantity));
+  const decreaseQuantity = () =>
+    setQuantity((prevQuantity) => Math.max(prevQuantity - 1, 1));
 
   const handleAddToWishlist = () => {
     addToWishlist(product.product_id);
     alert(`${product.product_name} has been added to your wishlist!`);
   };
-  
 
   const handleAddToBasket = () => {
     if (!selectedSize || !selectedColor) {
@@ -111,11 +117,22 @@ const ProductInfo = () => {
           <div className="buttons">
             <div className="QandW">
               <div className="quntity">
-                <button className="Q" onClick={decreaseQuantity}>-</button>
+                <button className="Q" onClick={decreaseQuantity}>
+                  -
+                </button>
                 <span>{quantity}</span>
-                <button className="Q" onClick={increaseQuantity}>+</button>
+                <button className="Q" onClick={increaseQuantity}>
+                  +
+                </button>
               </div>
-              <button className="W" onClick={handleAddToWishlist}>
+              <button
+                className="W"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setOpenModal(true);
+                  addToWishlist(product.product_id);
+                }}
+              >
                 Add To Wish List
               </button>
             </div>
@@ -126,6 +143,12 @@ const ProductInfo = () => {
             >
               Add to Basket
             </button>
+            <WishlistModel
+              open={openModal}
+              image={product.image}
+              message="Product added to Wishlist"
+              onClose={() => setOpenModal(false)}
+            />
           </div>
         </div>
       </div>

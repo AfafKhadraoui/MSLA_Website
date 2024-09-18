@@ -16,7 +16,7 @@ const WishlistModel = ({ open, onClose, image, message }) => {
         }}
         className="modalContainer"
       >
-        <img src={modalImage} alt="/" />
+        <img src={modalImage} alt="/" className="product-img"/>
         <div className="modalRight">
           <p className="closeBtn" onClick={onClose}>
             X

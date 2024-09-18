@@ -1,82 +1,77 @@
-.shoping{
-    margin-top: 115px;
+.shoping {
+  margin-top: 115px;
 }
 
-.Clothes{
-    display: flex;
-    flex-direction: row;
+.Clothes {
+  display: flex;
+  flex-direction: row;
 }
-.filter{
-    display: flex;
-    /* flex-grow: 0; */
-    flex-direction: column;
-    align-content: center;
-    border-right-color: #00000027 ;
-    border-right-style: solid;
-    border-right-width: 0.35px;
-    width: 20%;
-    height: 1260px;
-    
-}
-
-
-
-.headOfFilter{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60.4px;
-    border-bottom-width: 0.35px;
-    border-bottom-style: solid ;
-    border-bottom-color: #00000027 ;
-    font-size: 22px;
+.filter {
+  display: flex;
+  /* flex-grow: 0; */
+  flex-direction: column;
+  align-content: center;
+  border-right-color: #00000027;
+  border-right-style: solid;
+  border-right-width: 0.35px;
+  width: 20%;
+  height: 1260px;
 }
 
-
-.filterBody{
-    display: flex;
-    flex-direction: column;
-    width: 63.5%;
-    align-self: flex-end;
-    height: 1238px;
+.headOfFilter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60.4px;
+  border-bottom-width: 0.35px;
+  border-bottom-style: solid;
+  border-bottom-color: #00000027;
+  font-size: 22px;
 }
 
-.filterBody > div{
-    padding-top: 30px;
-
+.filterBody {
+  display: flex;
+  flex-direction: column;
+  width: 63.5%;
+  align-self: flex-end;
+  height: 1238px;
 }
 
-p{
-    padding-bottom: 1px;
-    font-size: 18px;
-    color: #353753;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
+.filterBody > div {
+  padding-top: 30px;
 }
 
-
-.filtredClothes{
-    /* flex-grow: 1; */
-    display: flex;
-    flex-direction: column;
-    width: 80%;
+.shoping p {
+  padding-bottom: 1px;
+  font-size: 18px;
+  color: #353753;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
 }
 
-.artical{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.filtredClothes {
+  /* flex-grow: 1; */
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
 
-.applyFilter{
-    align-self:flex-start;
-    width: 150px;
-    height: 33px;
-    border-radius: 20.2px;
-    background-color:#353753;
-    color: white;
-    border: none; 
-    margin-top: 20px ;
-    margin-bottom: 40px;
-    margin-left: 0px;
+.artical {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.applyFilter {
+  align-self: flex-start;
+  width: 150px;
+  height: 33px;
+  border-radius: 20.2px;
+  background-color: #353753;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-left: 0px;
 }
