@@ -1,0 +1,121 @@
+.overlay {
+  /* background-color: rgba(255, 255, 255, 0.7);  
+    background-color: rgba(255, 255, 255, 0.5);  */
+  backdrop-filter: blur(4px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999; /* High z-index to ensure it's above other content */
+  font-family: "Poppins-Regular";
+}
+
+.modalContainer {
+  max-width: 600px;
+  background-color: #ffffff;
+  width: 100%;
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  z-index: 10000;
+}
+.modalContainer h3 {
+  font-size: 2.1rem;
+}
+
+.modalContainer img {
+  width: 250px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.modalRight {
+  width: 100%;
+}
+
+.closeBtn {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  gap: 10px;
+}
+
+.content img {
+  width: 100px;
+}
+.btnContainer {
+  display: flex;
+  padding: 1rem 1rem;
+}
+.btnContainer button {
+  width: 100%;
+  margin: 0.5rem;
+  padding: 16px 0;
+  border: 1px solid var(--Main-Pink);
+  border-radius: 40px;
+  font-size: 1.5rem;
+}
+.btnContainer button:first-child {
+  border: 1px solid var(--MAIN-BLUE);
+}
+
+.btnPrimary {
+  background: linear-gradient(90deg, #353753 38%, rgba(79, 81, 125, 0.85) 100%);
+  color: white;
+}
+.btnPrimary:hover {
+  /* color: var(--MAIN-BLUE);
+    background-color: white; */
+  /* transform: scale(1.05); */
+  font-size: 1.6rem;
+}
+
+.btnOutline {
+  background: var(--Main-Pink);
+  color: var(--MAIN-BLUE);
+}
+
+.btnOutline i:hover {
+  font-size: 1.6rem;
+}
+
+.fa-heart {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 500px) {
+  .modalContainer {
+    flex-direction: column;
+    justify-content: center;
+    transform: none;
+    width: 100%;
+    height: 50vh;
+  }
+  .product-img {
+    /* width: 100%;
+      max-height: 200px;
+      object-fit: cover; */
+    display: none;
+  }
+
+  .heading {
+    margin: 1rem;
+  }
+}
