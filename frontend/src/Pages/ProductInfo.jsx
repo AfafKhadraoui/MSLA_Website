@@ -5,10 +5,14 @@ import "./CSS/ProductInfo.css";
 import { ShopContext } from "../context/ShopContext";
 import { useCart } from "../context/CartContext";
 import WishlistModel from "../components/Modals/Wishlist/WishlistModel";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./CSS/CustomTooast.css";
 
 const ProductInfo = () => {
   const { addToWishlist } = useContext(ShopContext);
   const [openModal, setOpenModal] = useState(false);
+  const [openmodal, setOpenmodal] = useState(false);
 
   const { addToCart } = useCart();
   const { id } = useParams();
@@ -47,14 +51,12 @@ const ProductInfo = () => {
   const decreaseQuantity = () =>
     setQuantity((prevQuantity) => Math.max(prevQuantity - 1, 1));
 
-  const handleAddToWishlist = () => {
-    addToWishlist(product.product_id);
-    alert(`${product.product_name} has been added to your wishlist!`);
-  };
 
   const handleAddToBasket = () => {
     if (!selectedSize || !selectedColor) {
-      alert("Please select a size and color before adding to the basket.");
+      toast.warning(
+        "Please select a size and color before adding to the basket"
+      );
       return;
     }
     addToCart(product, selectedColor, selectedSize, quantity);
@@ -135,6 +137,12 @@ const ProductInfo = () => {
               >
                 Add To Wish List
               </button>
+              <WishlistModel
+                open={openModal}
+                image={product.image}
+                message="Product added to Wishlist"
+                onClose={() => setOpenModal(false)}
+              />
             </div>
             <button
               className="AddToBasket"
@@ -143,11 +151,13 @@ const ProductInfo = () => {
             >
               Add to Basket
             </button>
-            <WishlistModel
-              open={openModal}
-              image={product.image}
-              message="Product added to Wishlist"
-              onClose={() => setOpenModal(false)}
+            <ToastContainer
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
             />
           </div>
         </div>
