@@ -31,7 +31,9 @@
 }
 
 .info{
-    width: 80%;
+    width: 68%;
+    margin-left: 0px;
+    height:90px;
 }
 
 .info >p{
@@ -43,9 +45,15 @@
 
 .ProductName{
     font-family: popins;
-    padding-top: 8px;
+    padding-top: 15px;
     padding-bottom: 8px;
+    padding-left: 2px;
+    white-space: nowrap;      /* Prevents text from wrapping to the next line */
+    overflow: hidden;         /* Ensures the text won't overflow its container */
+    text-overflow: ellipsis;  /* Adds "..." at the end of the truncated text */
+    max-width: 100%;          /* Ensures the element respects the container's width */
 }
+
 
 .oldPrice{
     text-decoration:line-through;
@@ -65,6 +73,7 @@
     display: flex;
     justify-content: end;
     align-items: center;
+    padding-right: 5px;
 }
 
 .BuingButton > input{

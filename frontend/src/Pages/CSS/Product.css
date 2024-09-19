@@ -1,5 +1,5 @@
 .shoping{
-    margin-top: 115px;
+    margin-top: 75px;
 }
 
 .Clothes{
@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60.4px;
+    height: 62px;
     border-bottom-width: 0.35px;
     border-bottom-style: solid ;
     border-bottom-color: #00000027 ;
@@ -68,7 +68,7 @@ p{
     justify-content: center;
 }
 
-.applyFilter{
+/* .applyFilter{
     align-self:flex-start;
     width: 150px;
     height: 33px;
@@ -79,4 +79,4 @@ p{
     margin-top: 20px ;
     margin-bottom: 40px;
     margin-left: 0px;
-}
+} */
