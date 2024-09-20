@@ -62,7 +62,7 @@
     margin-bottom: 2%;
     
 }
-span{
+.HomeMiddle_container span{
    font-weight: bold;
    padding-left: 2%;
    
@@ -70,3 +70,4 @@ span{
 .icons{
     padding: 3% 10%;
 }
+

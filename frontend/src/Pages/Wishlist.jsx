@@ -12,7 +12,7 @@ const Wishlist = () => {
     <div className="wishlist" style={{ overflow: "hidden" }}>
       <h2>Wishlist</h2>
       <div className="wishlistItems">
-        {wishlistItems.length > 0 ? (
+        {wishlistItems?.length > 0 ? (
           wishlistItems.map((product) => (
             <ProductBox key={product?.product_id} product={product} />
           ))

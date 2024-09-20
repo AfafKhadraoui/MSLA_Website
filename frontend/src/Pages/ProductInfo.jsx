@@ -9,9 +9,11 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./CSS/CustomTooast.css";
 import CartModal from "../components/Modals/Cart/CartModal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeartCircleMinus } from "@fortawesome/free-solid-svg-icons";
 
 const ProductInfo = () => {
-  const { addToWishlist } = useContext(ShopContext);
+  const { addToWishlist, RemoveFromWishlist } = useContext(ShopContext);
   const [openModal, setOpenModal] = useState(false);
   const [openmodal, setOpenmodal] = useState(false);
 
@@ -77,7 +79,7 @@ const ProductInfo = () => {
   };
 
   return (
-    <div className="body">
+    <div className="body ProdInfo">
       <ul className="pages">
         <li>Home</li>
         <li>Clothing</li>
@@ -131,15 +133,29 @@ const ProductInfo = () => {
 
           <div className="buttons">
             <div className="QandW">
-              <div className="quntity">
-                <button className="Q" onClick={decreaseQuantity}>
+              {/* <div className="quntity"> */}
+              {/* <button className="Q" onClick={decreaseQuantity}>
                   -
                 </button>
                 <span>{quantity}</span>
                 <button className="Q" onClick={increaseQuantity}>
                   +
-                </button>
-              </div>
+                </button> */}
+              <button
+                className="W W1"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setOpenModal(true);
+                  RemoveFromWishlist(product.product_id);
+                }}
+              >
+                Remove
+                <FontAwesomeIcon
+                  icon={faHeartCircleMinus}
+                  style={{ marginLeft: "5px" }}
+                />
+              </button>
+              {/* </div> */}
               <button
                 className="W"
                 onClick={(e) => {
@@ -148,7 +164,7 @@ const ProductInfo = () => {
                   addToWishlist(product.product_id);
                 }}
               >
-                Add To Wish List
+                Add To Wishlist
               </button>
               <WishlistModel
                 open={openModal}

@@ -54,7 +54,7 @@
   align-items: flex-start;
   gap: 5px;
 }
-.field p{
+.field p {
   white-space: nowrap;
   font-size: 16px;
   font-weight: 500;
@@ -100,10 +100,14 @@
   filter: none;
   transform: none;
 }
-.field span {
-  font-weight: 700;
+.LoginSignup-container span {
+  font-weight: bold;
   cursor: pointer;
   white-space: nowrap;
+}
+
+.LoginSignup-container span:hover {
+  color: #4f517dd7;
 }
 
 .loginSignup-fields-Text p {
