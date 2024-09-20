@@ -1,6 +1,4 @@
-// src/context/CartContext.js
-
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useEffect } from 'react';
 
 // Create the Cart Context
 const CartContext = createContext();
@@ -8,14 +6,21 @@ const CartContext = createContext();
 // Custom hook to use the Cart Context
 export const useCart = () => useContext(CartContext);
 
-// CartProvider component to wrap around parts of the app that need access to the cart
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  // Initialize cart state with cart items from localStorage or an empty array
+  const [cart, setCart] = useState(() => {
+    const savedCart = localStorage.getItem('cart');
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+
+  // Use useEffect to save the cart to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
 
   // Function to add a product to the cart
   const addToCart = async (product, selectedColor, selectedSize) => {
     try {
-      // Fetch the latest product data to check stock
       const response = await fetch(`${process.env.REACT_APP_API_URL}/api/product/${product._id}`);
       const productData = await response.json();
 
@@ -28,7 +33,6 @@ export const CartProvider = ({ children }) => {
         );
 
         if (existingProduct) {
-          // Increase quantity if the product already exists in the cart
           setCart(
             cart.map((item) =>
               item._id === product._id &&
@@ -39,7 +43,6 @@ export const CartProvider = ({ children }) => {
             )
           );
         } else {
-          // Add new product to the cart
           setCart([...cart, { ...product, quantity: 1, selectedColor, selectedSize }]);
         }
         alert(`${product.product_name} has been added to your cart!`);
@@ -73,7 +76,6 @@ export const CartProvider = ({ children }) => {
   // Function to increase the quantity of a product in the cart
   const increaseQuantity = async (productId, selectedColor, selectedSize) => {
     try {
-      // Fetch the latest product data to check stock
       const response = await fetch(`${process.env.REACT_APP_API_URL}/api/product/${productId}`);
       const productData = await response.json();
 
@@ -103,7 +105,6 @@ export const CartProvider = ({ children }) => {
           if (product.quantity > 1) {
             acc.push({ ...product, quantity: product.quantity - 1 });
           }
-          // If quantity is 1, do not add it back to the cart (effectively removing it)
         } else {
           acc.push(product);
         }

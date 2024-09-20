@@ -1,5 +1,6 @@
-.shoping {
-  margin-top: 115px;
+
+.shoping{
+    margin-top: 75px;
 }
 
 .Clothes {
@@ -18,15 +19,16 @@
   height: 1260px;
 }
 
-.headOfFilter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60.4px;
-  border-bottom-width: 0.35px;
-  border-bottom-style: solid;
-  border-bottom-color: #00000027;
-  font-size: 22px;
+
+.headOfFilter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 62px;
+    border-bottom-width: 0.35px;
+    border-bottom-style: solid ;
+    border-bottom-color: #00000027 ;
+    font-size: 22px;
 }
 
 .filterBody {
@@ -63,15 +65,17 @@
   justify-content: center;
 }
 
-.applyFilter {
-  align-self: flex-start;
-  width: 150px;
-  height: 33px;
-  border-radius: 20.2px;
-  background-color: #353753;
-  color: white;
-  border: none;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  margin-left: 0px;
-}
+
+/* .applyFilter{
+    align-self:flex-start;
+    width: 150px;
+    height: 33px;
+    border-radius: 20.2px;
+    background-color:#353753;
+    color: white;
+    border: none; 
+    margin-top: 20px ;
+    margin-bottom: 40px;
+    margin-left: 0px;
+} */
+>>>>>>> 72a4003f4bdb518c10d494a4cce6fa2a55a4434f

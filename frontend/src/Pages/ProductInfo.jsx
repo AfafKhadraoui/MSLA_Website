@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./CSS/ProductInfo.css";
 import { ShopContext } from "../context/ShopContext";
 import { useCart } from "../context/CartContext";
@@ -16,6 +16,7 @@ const ProductInfo = () => {
 
   const { addToCart } = useCart();
   const { id } = useParams();
+  const navigate = useNavigate(); // Use the useNavigate hook for redirection
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState("");
@@ -53,12 +54,20 @@ const ProductInfo = () => {
 
 
   const handleAddToBasket = () => {
+    const token = localStorage.getItem("auth-token"); // Check if user is authenticated
+    if (!token) {
+      alert("Please log in before adding items to the cart.");
+      navigate("/login"); // Redirect to the login page
+      return;
+    }
+
     if (!selectedSize || !selectedColor) {
       toast.warning(
         "Please select a size and color before adding to the basket"
       );
       return;
     }
+
     addToCart(product, selectedColor, selectedSize, quantity);
     alert(`${product.product_name} has been added to your basket!`);
   };
