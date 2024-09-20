@@ -200,7 +200,7 @@ const LoginSignup = () => {
             </button>
 
             <ToastContainer
-              autoClose={3000}
+              autoClose={2000}
               hideProgressBar={false}
               closeButton={<CustomCloseButton />}
               newestOnTop={false}

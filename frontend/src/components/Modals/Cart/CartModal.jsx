@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import heart from "../../Assets/images/heart.png";
-import "./WishlistModel.css";
+import "../Wishlist/WishlistModel.css";
 import { useNavigate } from "react-router-dom";
-import { ShopContext } from "../../../context/ShopContext";
+import { CartContext } from "../../../context/CartContext";
 
-const WishlistModel = ({ open, onClose, image, message }) => {
+const CartModal = ({ open, onClose}) => {
   const navigate = useNavigate();
-  const { modalImage, modalMessage, modalBtn } = useContext(ShopContext);
+  const { modalImage, modalMessage, modalBtn } = useContext(CartContext);
   if (!open) return null;
   return (
     <div onClick={onClose} className="overlay">
@@ -16,7 +16,7 @@ const WishlistModel = ({ open, onClose, image, message }) => {
         }}
         className="modalContainer"
       >
-        <img src={modalImage} alt="/" className="product-img"/>
+        <img src={modalImage} alt="/" className="product-img" />
         <div className="modalRight">
           <p className="closeBtn" onClick={onClose}>
             X
@@ -45,8 +45,7 @@ const WishlistModel = ({ open, onClose, image, message }) => {
               }}
             >
               <i className="fa fa-heart">
-                {" "}
-                {modalBtn === "wishlist" ? "View Wishlist" : "login"}
+                {modalBtn === "cart" ? "View Cart" : "login"}
               </i>
             </button>
           </div>
@@ -56,4 +55,4 @@ const WishlistModel = ({ open, onClose, image, message }) => {
   );
 };
 
-export default WishlistModel;
+export default CartModal;

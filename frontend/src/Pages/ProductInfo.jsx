@@ -8,6 +8,7 @@ import WishlistModel from "../components/Modals/Wishlist/WishlistModel";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./CSS/CustomTooast.css";
+import CartModal from "../components/Modals/Cart/CartModal";
 
 const ProductInfo = () => {
   const { addToWishlist } = useContext(ShopContext);
@@ -52,12 +53,14 @@ const ProductInfo = () => {
   const decreaseQuantity = () =>
     setQuantity((prevQuantity) => Math.max(prevQuantity - 1, 1));
 
-
   const handleAddToBasket = () => {
-    const token = localStorage.getItem("auth-token"); // Check if user is authenticated
+    const token = localStorage.getItem("auth-token");
     if (!token) {
-      alert("Please log in before adding items to the cart.");
-      navigate("/login"); // Redirect to the login page
+      // toast.warning("Please log in before adding items to the cart.");
+      // setTimeout(() => {
+      //   window.location.href = "/login";
+      // }, 3000);
+      setOpenmodal(true);
       return;
     }
 
@@ -69,6 +72,7 @@ const ProductInfo = () => {
     }
 
     addToCart(product, selectedColor, selectedSize, quantity);
+    setOpenmodal(true);
     alert(`${product.product_name} has been added to your basket!`);
   };
 
@@ -148,8 +152,6 @@ const ProductInfo = () => {
               </button>
               <WishlistModel
                 open={openModal}
-                image={product.image}
-                message="Product added to Wishlist"
                 onClose={() => setOpenModal(false)}
               />
             </div>
@@ -160,6 +162,7 @@ const ProductInfo = () => {
             >
               Add to Basket
             </button>
+            <CartModal open={openmodal} onClose={() => setOpenmodal(false)} />
             <ToastContainer
               autoClose={3000}
               hideProgressBar={false}

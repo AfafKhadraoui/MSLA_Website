@@ -4,6 +4,8 @@ import CONFIG from "../config.json";
 import photo from "../components/Assets/images/product.png";
 import login from "../components/Assets/images/login.png";
 
+
+
 export const ShopContext = createContext(null);
 
 const ShopContextProvider = (props) => {
@@ -86,11 +88,14 @@ const ShopContextProvider = (props) => {
             }
           });
       } catch (err) {
-        const product = products.find((product) => product?.product_id === id);
+        const product = products.find(
+          (product) => product?.product_id === id
+        );
         // alert(err?.response?.data?.message);
         setModalMessage(err?.response?.data?.message);
         setModalBtn("wishlist");
         setModalImage(product?.image || photo);
+      
       }
     } else {
       setModalMessage("Please log in to add items to your wishlist");

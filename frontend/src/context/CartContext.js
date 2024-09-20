@@ -1,12 +1,46 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
+import photo from "../components/Assets/images/product.png";
+import login from "../components/Assets/images/login.png";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "../Pages/CSS/CustomTooast.css";
+
 
 // Create the Cart Context
-const CartContext = createContext();
+export const CartContext = createContext();
 
 // Custom hook to use the Cart Context
 export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
+
+  const [modalMessage, setModalMessage] = useState("Please log in before adding items to the cart"); // Modal message state
+  const [modalImage, setModalImage] = useState(login);
+  const [modalBtn, setModalBtn] = useState("login");
+
+
+  const CustomCloseButton = ({ closeToast }) => (
+    <button
+      onClick={(e) => {
+        e.stopPropagation();
+        closeToast();
+      }}
+      style={{
+        background: "transparent",
+        border: "none",
+        cursor: "pointer",
+        width: "1px",
+      }}
+    >
+      <i
+        className="fa fa-times"
+        style={{ color: "transparent", fontSize: "16px" }}
+      ></i>
+    </button>
+  );
+
+
   // Initialize cart state with cart items from localStorage or an empty array
   const [cart, setCart] = useState(() => {
     const savedCart = localStorage.getItem('cart');
@@ -20,6 +54,7 @@ export const CartProvider = ({ children }) => {
 
   // Function to add a product to the cart
   const addToCart = async (product, selectedColor, selectedSize) => {
+
     try {
       const response = await fetch(`${process.env.REACT_APP_API_URL}/api/product/${product._id}`);
       const productData = await response.json();
@@ -36,8 +71,8 @@ export const CartProvider = ({ children }) => {
           setCart(
             cart.map((item) =>
               item._id === product._id &&
-              item.selectedColor === selectedColor &&
-              item.selectedSize === selectedSize
+                item.selectedColor === selectedColor &&
+                item.selectedSize === selectedSize
                 ? { ...item, quantity: Math.min(item.quantity + 1, productData.quantity) }
                 : item
             )
@@ -45,13 +80,19 @@ export const CartProvider = ({ children }) => {
         } else {
           setCart([...cart, { ...product, quantity: 1, selectedColor, selectedSize }]);
         }
-        alert(`${product.product_name} has been added to your cart!`);
+        // alert(`${product.product_name} has been added to your cart!`);
+        setModalImage(product?.image || photo);
+        setModalMessage("Product added to Cart");
+        setModalBtn("cart");
       } else {
-        alert('Product is out of stock');
+        // alert('Product is out of stock');
+        toast.warning("'Product is out of stock'")
       }
     } catch (error) {
-      console.error('Error fetching product data:', error);
+      toast.error(error?.response?.data?.message)
+
     }
+
   };
 
   // Function to remove a product from the cart
@@ -82,14 +123,15 @@ export const CartProvider = ({ children }) => {
       setCart(
         cart.map((product) =>
           product._id === productId &&
-          product.selectedColor === selectedColor &&
-          product.selectedSize === selectedSize
+            product.selectedColor === selectedColor &&
+            product.selectedSize === selectedSize
             ? { ...product, quantity: Math.min(product.quantity + 1, productData.quantity) }
             : product
         )
       );
     } catch (error) {
-      console.error('Error fetching product data:', error);
+      // console.error('Error fetching product data:', error);
+      toast.error("Error fetching product data")
     }
   };
 
@@ -122,9 +164,22 @@ export const CartProvider = ({ children }) => {
         resetCart,
         increaseQuantity,
         decreaseQuantity,
+        modalImage,
+        modalBtn,
+        modalMessage
       }}
     >
+      <ToastContainer
+        autoClose={2000}
+        hideProgressBar={false}
+        closeButton={<CustomCloseButton />}
+        newestOnTop={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       {children}
     </CartContext.Provider>
   );
 };
+export default CartProvider
