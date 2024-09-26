@@ -41,7 +41,7 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
 - <div align="center">
     <table>
         <tr>
-            <td><img src="https://github.com/user-attachments/assets/24bef5c4-5811-442d-9b9c-f7f79617d992" alt="Popup 1""></td>
+            <td><img src="https://github.com/user-attachments/assets/24bef5c4-5811-442d-9b9c-f7f79617d992" alt="Popup 1"></td>
             <td><img src="https://github.com/user-attachments/assets/a87cf05b-e689-4290-8ca0-d3865d0e9f7f" alt="Popup 2" ></td>
         </tr>
         <tr>
@@ -51,24 +51,16 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
     </table>
 </div>
 
-- ![Screenshot 2024-09-26 010605](https://github.com/user-attachments/assets/24bef5c4-5811-442d-9b9c-f7f79617d992)
-- ![Screenshot 2024-09-26 010509](https://github.com/user-attachments/assets/a87cf05b-e689-4290-8ca0-d3865d0e9f7f)
-![Screenshot 2024-09-26 010525](https://github.com/user-attachments/assets/edc42bd9-dbdb-4545-937b-aa2953fb5b9e)
-![Screenshot 2024-09-26 010645](https://github.com/user-attachments/assets/5a916347-83d7-4e7a-b409-30413a528395)
-
 - **Customized Window Modals**
 - ***login modal***
 - - <div align="center">
     <table>
         <tr>
-            <td><img src="https://github.com/user-attachments/assets/afa6ccc7-7204-4600-b327-7a95d5bdb072" alt="img 1" width="45%"></td>
-            <td><img src="https://github.com/user-attachments/assets/393d4f07-7cbf-4160-9446-685c24f7f5f4" alt="img2 2" width="45%"></td>
+            <td><img src="https://github.com/user-attachments/assets/afa6ccc7-7204-4600-b327-7a95d5bdb072" alt="img 1" ></td>
+            <td><img src="https://github.com/user-attachments/assets/393d4f07-7cbf-4160-9446-685c24f7f5f4" alt="img2 2"></td>
         </tr>
     </table>
 </div>
-
-![Screenshot 2024-09-26 005745](https://github.com/user-attachments/assets/afa6ccc7-7204-4600-b327-7a95d5bdb072)
-![Screenshot 2024-09-26 010331](https://github.com/user-attachments/assets/393d4f07-7cbf-4160-9446-685c24f7f5f4)
 
  ***Addding/Removing to/From wishlist modal***
  ![Screenshot 2024-09-26 010845](https://github.com/user-attachments/assets/88fdac28-1789-4a78-9a4c-2a0fd3da8244)
@@ -80,30 +72,53 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
 
 
 - **User Authentication**: Secure login with token-based authentication, allowing users to save their cart and wishlist items.
-- - <div align="center">
+  - <div align="center">
     <table>
         <tr>
-            <td><img src="https://github.com/user-attachments/assets/b623a9ee-80b7-4183-8156-c3601212892d" alt="image 1" width="45%">before login</td>
-            <td><img src="https://github.com/user-attachments/assets/b487e171-9f45-4bc4-b424-2d3805b9595f" alt="iamge 2" width="45%">after login</td>
+            <td><img src="https://github.com/user-attachments/assets/b623a9ee-80b7-4183-8156-c3601212892d" alt="image 1">before login</td>
+            <td><img src="https://github.com/user-attachments/assets/b487e171-9f45-4bc4-b424-2d3805b9595f" alt="iamge 2">after login</td>
         </tr>
        
     </table>
 </div>
 
- - ![Screenshot 2024-09-26 012609](https://github.com/user-attachments/assets/b623a9ee-80b7-4183-8156-c3601212892d) before login
-![Screenshot 2024-09-26 012704](https://github.com/user-attachments/assets/b487e171-9f45-4bc4-b424-2d3805b9595f) after login
- 
 - **Responsive Design**: Optimized for all devices, ensuring a seamless experience whether on desktop or mobile.
-- ### Home Page
-- https://github.com/user-attachments/assets/9936dbd0-d671-4840-b654-f755e5aec1a6
-https://github.com/user-attachments/assets/52d932dc-1461-4a15-a5e6-4c5f7c6b8857
+- ***Home Page***
+- <div align="center">
+    <table>
+        <tr>
+            <td><img src="https://github.com/user-attachments/assets/9936dbd0-d671-4840-b654-f755e5aec1a6" alt="image 1">Desktops</td>
+            <td><img src="https://github.com/user-attachments/assets/52d932dc-1461-4a15-a5e6-4c5f7c6b8857" alt="image 2"> Mobile (Smartphone)</td>
+        </tr>
+       
+    </table>
+</div>
+- ***Login Page***
+ <div align="center">
+  <img src="https://github.com/user-attachments/assets/39953650-ca9b-4d31-a6f7-ec2424b17eec" alt="image 1">Desktops
+    <table>
+        <tr>
+            <td><img src="https://github.com/user-attachments/assets/2b05fa05-1f95-4837-83c8-beeb4b7d301b" alt="image 2">) Tablets iPads</td>
+            <td><img src="https://github.com/user-attachments/assets/5d9e9182-7e91-4f36-adb9-3f4af70215f7" alt="image 3"> Mobile (Smartphone)</td>
+        </tr>
+    </table>
+</div>
 
-- ### Login Page
 ![Screenshot 2024-09-26 004830](https://github.com/user-attachments/assets/39953650-ca9b-4d31-a6f7-ec2424b17eec) Desktops	
  ![Screenshot 2024-09-26 004847](https://github.com/user-attachments/assets/2b05fa05-1f95-4837-83c8-beeb4b7d301b) Tablets iPads
 ![Screenshot 2024-09-26 004901](https://github.com/user-attachments/assets/5d9e9182-7e91-4f36-adb9-3f4af70215f7) Mobile (Smartphone)
 
-- ### Contact  Page
+- ***Contact  Page***
+-  <div align="center">
+  <img src="https://github.com/user-attachments/assets/0fda55bc-883a-4e56-9cbf-f08ec4fdd13c" alt="image 1">Desktops
+    <table>
+        <tr>
+            <td><img src="https://github.com/user-attachments/assets/ba353c51-5681-42bb-a389-6e3b7aff09d4" alt="image 2">) Tablets iPads</td>
+            <td><img src="https://github.com/user-attachments/assets/07cd945c-1cfb-4ede-8538-c5498a0fcf51" alt="image 3"> Mobile (Smartphone)</td>
+        </tr>
+    </table>
+</div>
+
 ![Screenshot 2024-09-26 005449](https://github.com/user-attachments/assets/0fda55bc-883a-4e56-9cbf-f08ec4fdd13c)Desktops	
 ![Screenshot 2024-09-26 005404](https://github.com/user-attachments/assets/ba353c51-5681-42bb-a389-6e3b7aff09d4)Tablets iPads
 ![Screenshot 2024-09-26 005428](https://github.com/user-attachments/assets/07cd945c-1cfb-4ede-8538-c5498a0fcf51) Mobile (Smartphone)
