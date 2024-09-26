@@ -52,6 +52,12 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
 </div>
 
 - **Customized Window Modals**
+- <div align="center">
+    <img src="https://github.com/user-attachments/assets/afa6ccc7-7204-4600-b327-7a95d5bdb072" alt="Login Modal" width="20%">
+    <img src="https://github.com/user-attachments/assets/393d4f07-7cbf-4160-9446-685c24f7f5f4" alt="Wishlist Modal 1" width="20%">
+    <img src="https://github.com/user-attachments/assets/88fdac28-1789-4a78-9a4c-2a0fd3da8244" alt="Wishlist Modal 2" width="20%">
+    <img src="https://github.com/user-attachments/assets/975b7a24-ecd5-423c-99d1-66f0aa8a876e" alt="Wishlist Modal 3" width="20%">
+</div>
 - ***login modal***
 - - <div align="center">
     <table>
