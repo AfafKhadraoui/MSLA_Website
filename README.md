@@ -1,6 +1,6 @@
 
 <div align="center" style="display: flex; align-items: center; justify-content: center;">
- <img src="https://github.com/user-attachments/assets/d94c3359-4d29-4e3d-a406-3aba98a0a176" alt="favicon-32x32" width="32" height="32" style="margin-right: 10px;"/>
+ <img src="https://github.com/user-attachments/assets/1b08adcc-efe3-4a3d-94de-221a3cfe5c70" alt="favicon-32x32" width="32" height="32" style="margin-right: 10px;"/>
    <span style="font-size: 24px; font-weight: bold;">MSLA - Your Family’s E-Commerce Solution</span>
 </div>
 
