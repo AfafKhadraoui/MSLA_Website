@@ -1,7 +1,5 @@
 
 <div align="center" style="display: flex; align-items: center; justify-content: center;">
-<!--   <img src="https://github.com/user-attachments/assets/d94c3359-4d29-4e3d-a406-3aba98a0a176" alt="favicon-32x32" width="32" height="32" style="margin-right: 10px;"/>
-   -->
 <p style="font-size: 34px; font-weight: bolder; color: #353753;">MSLA</p>
 <span style="font-size: 24px; font-weight: bold;">MSLA - Your Family’s E-Commerce Solution</span>
 </div>
