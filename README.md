@@ -52,14 +52,8 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
 </div>
 
 - **Customized Window Modals**
-- <div align="center">
-    <img src="https://github.com/user-attachments/assets/afa6ccc7-7204-4600-b327-7a95d5bdb072" alt="Login Modal" width="20%">
-    <img src="https://github.com/user-attachments/assets/393d4f07-7cbf-4160-9446-685c24f7f5f4" alt="Wishlist Modal 1" width="20%">
-    <img src="https://github.com/user-attachments/assets/88fdac28-1789-4a78-9a4c-2a0fd3da8244" alt="Wishlist Modal 2" width="20%">
-    <img src="https://github.com/user-attachments/assets/975b7a24-ecd5-423c-99d1-66f0aa8a876e" alt="Wishlist Modal 3" width="20%">
-</div>
 - ***login modal***
-- - <div align="center">
+  - <div align="center">
     <table>
         <tr>
             <td><img src="https://github.com/user-attachments/assets/afa6ccc7-7204-4600-b327-7a95d5bdb072" alt="img 1" ></td>
@@ -67,8 +61,17 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
         </tr>
     </table>
 </div>
-
  ***Addding/Removing to/From wishlist modal***
+ - <div align="center">
+    <table>
+        <tr>
+            <td><img src="https://github.com/user-attachments/assets/88fdac28-1789-4a78-9a4c-2a0fd3da8244" alt="img 1" ></td>
+            <td><img src="https://github.com/user-attachments/assets/975b7a24-ecd5-423c-99d1-66f0aa8a876e" alt="img2 2"></td>
+            <td><img src="https://github.com/user-attachments/assets/73aa7f2d-9a9e-429a-b83f-6a83ea263f2b4" alt="img2 2"></td>
+        </tr>
+    </table>
+</div>
+
  ![Screenshot 2024-09-26 010845](https://github.com/user-attachments/assets/88fdac28-1789-4a78-9a4c-2a0fd3da8244)
  ![Screenshot 2024-09-26 012401](https://github.com/user-attachments/assets/975b7a24-ecd5-423c-99d1-66f0aa8a876e)
 ![Screenshot 2024-09-26 011455](https://github.com/user-attachments/assets/73aa7f2d-9a9e-429a-b83f-6a83ea263f2b)
