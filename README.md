@@ -47,18 +47,22 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
  <div align="center">
     <table>
         <tr>
-            <td><img src="https://github.com/user-attachments/assets/24bef5c4-5811-442d-9b9c-f7f79617d992" alt="Popup 1"></td>
+            <td><img src="https://github.com/user-attachments/assets/d83c8a3b-fa57-4794-9e23-d6aecbfef68b" alt="Popup 1"></td>
             <td><img src="https://github.com/user-attachments/assets/a87cf05b-e689-4290-8ca0-d3865d0e9f7f" alt="Popup 2" ></td>
         </tr>
         <tr>
-            <td><img src="https://github.com/user-attachments/assets/edc42bd9-dbdb-4545-937b-aa2953fb5b9e" alt="Popup 3"></td>
+            <td><img src="https://github.com/user-attachments/assets/b3230e94-28f4-4503-9452-866bb7403b30" alt="Popup 3"></td>
             <td><img src="https://github.com/user-attachments/assets/5a916347-83d7-4e7a-b409-30413a528395" alt="Popup 4"></td>
+        </tr>
+        <tr>
+            <td><img src="https://github.com/user-attachments/assets/98e0c87a-c982-4ce4-a40b-15e28b94c0e1" alt="Popup 5"></td>
+            <td><img src="https://github.com/user-attachments/assets/1538ce45-d85b-4723-b1ce-c6072ef9a494" alt="Popup 6"></td>
         </tr>
     </table>
 </div>
 
 - ### Customized Window Modals
-- #### login modal
+ #### login modal
    <div>
     <div align="center">
     <table>
@@ -82,11 +86,11 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
   </div>
 
 
- - #### Addding To Cart modal
+#### Addding To Cart modal
  ![Screenshot 2024-09-26 010709](https://github.com/user-attachments/assets/04321c69-72fc-4c83-a614-c3fe09235708)
 
 
-- #### User Authentication: Secure login with token-based authentication, allowing users to save their cart and wishlist items.
+#### User Authentication: Secure login with token-based authentication, allowing users to save their cart and wishlist items.
   <div align="center">
     <table>
         <tr>
@@ -96,9 +100,9 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
     </table>
 </div></div>
 
-- #### Responsive Design: Optimized for all devices, ensuring a seamless experience whether on desktop or mobile.
+- ### Responsive Design: Optimized for all devices, ensuring a seamless experience whether on desktop or mobile.
   
-- #### Home Page
+ #### Home Page
  <div align="center">
     <table>
         <tr>
@@ -119,7 +123,7 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
 </div>
 
 
-- #### Login Page
+#### Login Page
   <div align="center">
     <img src="https://github.com/user-attachments/assets/39953650-ca9b-4d31-a6f7-ec2424b17eec" alt="Desktops">
     <p>Desktops</p>
