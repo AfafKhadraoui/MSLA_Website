@@ -1,7 +1,7 @@
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/d94c3359-4d29-4e3d-a406-3aba98a0a176" alt="favicon-32x32" width="32" height="32"/>
-  <h1>MSLA - Your Family’s E-Commerce Solution</h1>
+<div align="center" style="display: flex; align-items: center; justify-content: center;">
+  <img src="https://github.com/user-attachments/assets/d94c3359-4d29-4e3d-a406-3aba98a0a176" alt="favicon-32x32" width="32" height="32" style="margin-right: 10px;"/>
+  <span style="font-size: 24px; font-weight: bold;">MSLA - Your Family’s E-Commerce Solution</span>
 </div>
 
 **MSLA** is a comprehensive e-commerce platform developed by a dedicated team led by Me "Khadraoui Afaf". It offers a wide range of clothing for men, women, and children, providing a convenient shopping experience for the entire family. Built using modern technologies such as ReactJS, MongoDB, and ExpressJS, MSLA was created not just as a course project but also as a practical application of the team's skills and passion for digital marketing. Explore MSLA and discover a user-friendly, responsive platform designed to meet your family's fashion needs!
@@ -93,14 +93,16 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
 - #### Responsive Design: Optimized for all devices, ensuring a seamless experience whether on desktop or mobile.
 - #### Home Page
 - <div align="center">
+- <div>
     <table>
         <tr>
-            <td><img src="https://github.com/user-attachments/assets/9936dbd0-d671-4840-b654-f755e5aec1a6" alt="image 1">Desktops</td>
-            <td><img src="https://github.com/user-attachments/assets/52d932dc-1461-4a15-a5e6-4c5f7c6b8857" alt="image 2"> Mobile (Smartphone)</td>
+            <td><video src="https://github.com/user-attachments/assets/9936dbd0-d671-4840-b654-f755e5aec1a6" alt="image 1"></video><p>Desktops</p>
+</td>
+            <td><video src="https://github.com/user-attachments/assets/52d932dc-1461-4a15-a5e6-4c5f7c6b8857" alt="image 2"></video><p>Mobile (Smartphone)</p>
+</td>
         </tr>
-       
     </table>
-</div>
+    </div>
 - #### Login Page
  <div align="center">
   <img src="https://github.com/user-attachments/assets/39953650-ca9b-4d31-a6f7-ec2424b17eec" alt="image 1">Desktops
@@ -111,17 +113,17 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
         </tr>
     </table>
 </div>
-- #### Contact  Page
+-#### Contact Page
 -  <div align="center">
-  <img src="https://github.com/user-attachments/assets/0fda55bc-883a-4e56-9cbf-f08ec4fdd13c" alt="image 1">Desktops
+            <img src="https://github.com/user-attachments/assets/ba353c51-5681-42bb-a389-6e3b7aff09d4" alt="image 2">
     <table>
         <tr>
-            <td><img src="https://github.com/user-attachments/assets/ba353c51-5681-42bb-a389-6e3b7aff09d4" alt="image 2">) Tablets iPads</td>
+            <td><img src="https://github.com/user-attachments/assets/0fda55bc-883a-4e56-9cbf-f08ec4fdd13c" alt="image 1">Tablets iPads</td>
             <td><img src="https://github.com/user-attachments/assets/07cd945c-1cfb-4ede-8538-c5498a0fcf51" alt="image 3"> Mobile (Smartphone)</td>
         </tr>
     </table>
 </div>
-
+</div>
 ## Technologies Used
 - **Front-End**: ReactJS and custom CSS for styling to demonstrate our mastery of CSS without relying on frameworks.
 - **Back-End**: ExpressJS and MongoDB, utilizing libraries like JSON Web Token for authentication.
