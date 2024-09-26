@@ -1,8 +1,5 @@
 
-<div align="center" style="display: flex; align-items: center; justify-content: center;">
- <img src="https://github.com/user-attachments/assets/1e80d89e-b477-44b8-a29e-05c069a594a7" alt="favicon-32x32" width="20" height="20" style="margin-right: 10px;"/>
    <h2 style="font-weight: bold;"> ^_^  MSLA - Your Family’s E-Commerce Solution</h2>
-</div>
 
 **MSLA** is a comprehensive e-commerce platform developed by a dedicated team led by Me "Khadraoui Afaf". It offers a wide range of clothing for men, women, and children, providing a convenient shopping experience for the entire family. Built using modern technologies such as ReactJS, MongoDB, and ExpressJS, MSLA was created not just as a course project but also as a practical application of the team's skills and passion for digital marketing. Explore MSLA and discover a user-friendly, responsive platform designed to meet your family's fashion needs!
 
