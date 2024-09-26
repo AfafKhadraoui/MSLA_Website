@@ -25,7 +25,6 @@ We drew inspiration from existing designs and added our own features and customi
 As the team leader, I oversaw the entire project, making decisions on design, feature implementation, and technical execution.
 
 ## Features
-You can see the representation video found here
 MSLA offers a variety of features aimed at providing an intuitive and efficient shopping experience:
 
 - ### Product Browsing by Category: Users can browse products by categories such as men, women, and kids.
@@ -35,6 +34,8 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
 - ### Advanced Filtering Options: Filter products by color, size, price, type, and availability.
  https://github.com/user-attachments/assets/e1879e8a-fec0-4ccb-b50d-946464c6d7ec
 
+- ### Searching by name:Filter products by name
+- <video src="https://github.com/user-attachments/assets/6cc600ae-f1b8-4d9c-905e-9239f9d8ee24" autoplay muted loop>
 
 - ### Shopping Cart: Easily add items to your cart and review your selection before checkout.
    ![Screenshot 2024-09-26 012946](https://github.com/user-attachments/assets/48ed4420-a7e2-4d58-9c79-60e22496cd5f)
