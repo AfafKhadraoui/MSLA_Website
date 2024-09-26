@@ -47,7 +47,7 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
  <div align="center">
     <table>
         <tr>
-            <td><img src="https://github.com/user-attachments/assets/d83c8a3b-fa57-4794-9e23-d6aecbfef68b" alt="Popup 1"></td>
+            <td><img src="https://github.com/user-attachments/assets/d83c8a3b-fa57-4794-9e23-d6aecbfef68b" height="100%" alt="Popup 1"></td>
             <td><img src="https://github.com/user-attachments/assets/a87cf05b-e689-4290-8ca0-d3865d0e9f7f" alt="Popup 2" ></td>
         </tr>
         <tr>
@@ -142,14 +142,21 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
 </div>
 
 #### Contact Page
-
-<div align="center">
-    <img src="https://github.com/user-attachments/assets/ba353c51-5681-42bb-a389-6e3b7aff09d4" alt="Contact Desktop">
+ <div align="center">
+    <img src="https://github.com/user-attachments/assets/ba353c51-5681-42bb-a389-6e3b7aff09d4" alt="Desktops">
     <p>Desktops</p>
-    <img src="https://github.com/user-attachments/assets/07cd945c-1cfb-4ede-8538-c5498a0fcf51"  alt="Contact Tablet">
-    <p>Tablets/iPads</p>
-    <img src="https://github.com/user-attachments/assets/0fda55bc-883a-4e56-9cbf-f08ec4fdd13c"  alt="Contact mobile">
-    <p>Mobile (Smartphone)</p>
+    <table>
+        <tr>
+            <td>
+                <img src="https://github.com/user-attachments/assets/07cd945c-1cfb-4ede-8538-c5498a0fcf51" alt="Tablets">
+                <p>Tablets/iPads</p>
+            </td>
+            <td>
+                <img src="https://github.com/user-attachments/assets/0fda55bc-883a-4e56-9cbf-f08ec4fdd13c"  alt="Mobile">
+                <p>Mobile (Smartphone)</p>
+            </td>
+        </tr>
+    </table>
 </div>
 
 ## Technologies Used
