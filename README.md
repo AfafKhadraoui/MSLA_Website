@@ -39,7 +39,7 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
 - ### Shopping Cart: Easily add items to your cart and review your selection before checkout.
    ![Screenshot 2024-09-26 012946](https://github.com/user-attachments/assets/48ed4420-a7e2-4d58-9c79-60e22496cd5f)
 
--  - ### Wishlist: Save your favorite items for future purchase, 
+-  ### Wishlist: Save your favorite items for future purchase, 
  ![image](https://github.com/user-attachments/assets/0cf1ebed-2a8c-4810-8f96-95737e55a2fd)
 
 
@@ -58,7 +58,6 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
 </div>
 
 - ### Customized Window Modals
-- 
 - #### login modal
    <div>
     <div align="center">
@@ -141,11 +140,11 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
 #### Contact Page
 
 <div align="center">
-    <img src="https://github.com/user-attachments/assets/0fda55bc-883a-4e56-9cbf-f08ec4fdd13c"  alt="Contact Desktop">
+    <img src="https://github.com/user-attachments/assets/ba353c51-5681-42bb-a389-6e3b7aff09d4" alt="Contact Desktop">
     <p>Desktops</p>
-    <img src="https://github.com/user-attachments/assets/ba353c51-5681-42bb-a389-6e3b7aff09d4" alt="Contact Tablet">
+    <img src="https://github.com/user-attachments/assets/07cd945c-1cfb-4ede-8538-c5498a0fcf51"  alt="Contact Tablet">
     <p>Tablets/iPads</p>
-    <img src="https://github.com/user-attachments/assets/07cd945c-1cfb-4ede-8538-c5498a0fcf51"  alt="Contact Mobile">
+    <img src="https://github.com/user-attachments/assets/0fda55bc-883a-4e56-9cbf-f08ec4fdd13c"  alt="Contact mobile">
     <p>Mobile (Smartphone)</p>
 </div>
 
