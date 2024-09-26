@@ -26,42 +26,74 @@ You can see the representation video found here
 MSLA offers a variety of features aimed at providing an intuitive and efficient shopping experience:
 
 - **Product Browsing by Category**: Users can browse products by categories such as men, women, and kids.
-- ![image](https://github.com/user-attachments/assets/41dcb837-3137-456f-8490-0f3bb21af73e) [products.zip](https://github.com/user-attachments/files/17081439/products.zip)
+- ![image](https://github.com/user-attachments/assets/41dcb837-3137-456f-8490-0f3bb21af73e)
 
 - **Advanced Filtering Options**: Filter products by color, size, price, type, and availability.
 - https://github.com/user-attachments/assets/e1879e8a-fec0-4ccb-b50d-946464c6d7ec
 
 - **Shopping Cart**: Easily add items to your cart and review your selection before checkout.
-- 
+- <img src="https://github.com/user-attachments/assets/48ed4420-a7e2-4d58-9c79-60e22496cd5f" alt="img" width="70%">
+-  ![Screenshot 2024-09-26 012946](https://github.com/user-attachments/assets/48ed4420-a7e2-4d58-9c79-60e22496cd5f)
+
+-  - **Wishlist**: Save your favorite items for future purchase, 
+- ![image](https://github.com/user-attachments/assets/0cf1ebed-2a8c-4810-8f96-95737e55a2fd)
+
 - **Customized Pop-Up Messages**: Interactive pop-ups to enhance user experience.
+- <div align="center">
+    <table>
+        <tr>
+            <td><img src="https://github.com/user-attachments/assets/24bef5c4-5811-442d-9b9c-f7f79617d992" alt="Popup 1" width="45%"></td>
+            <td><img src="https://github.com/user-attachments/assets/a87cf05b-e689-4290-8ca0-d3865d0e9f7f" alt="Popup 2" width="45%"></td>
+        </tr>
+        <tr>
+            <td><img src="https://github.com/user-attachments/assets/edc42bd9-dbdb-4545-937b-aa2953fb5b9e" alt="Popup 3" width="45%"></td>
+            <td><img src="https://github.com/user-attachments/assets/5a916347-83d7-4e7a-b409-30413a528395" alt="Popup 4" width="45%"></td>
+        </tr>
+    </table>
+</div>
+
 - ![Screenshot 2024-09-26 010605](https://github.com/user-attachments/assets/24bef5c4-5811-442d-9b9c-f7f79617d992)
 - ![Screenshot 2024-09-26 010509](https://github.com/user-attachments/assets/a87cf05b-e689-4290-8ca0-d3865d0e9f7f)
 ![Screenshot 2024-09-26 010525](https://github.com/user-attachments/assets/edc42bd9-dbdb-4545-937b-aa2953fb5b9e)
 ![Screenshot 2024-09-26 010645](https://github.com/user-attachments/assets/5a916347-83d7-4e7a-b409-30413a528395)
 
 - **Customized Window Modals**
-- ### login modal
+- ***login modal***
+- - <div align="center">
+    <table>
+        <tr>
+            <td><img src="https://github.com/user-attachments/assets/afa6ccc7-7204-4600-b327-7a95d5bdb072" alt="img 1" width="45%"></td>
+            <td><img src="https://github.com/user-attachments/assets/393d4f07-7cbf-4160-9446-685c24f7f5f4" alt="img2 2" width="45%"></td>
+        </tr>
+    </table>
+</div>
+
 ![Screenshot 2024-09-26 005745](https://github.com/user-attachments/assets/afa6ccc7-7204-4600-b327-7a95d5bdb072)
 ![Screenshot 2024-09-26 010331](https://github.com/user-attachments/assets/393d4f07-7cbf-4160-9446-685c24f7f5f4)
- ### Addding/Removing to/From wishlist modal
+
+ ***Addding/Removing to/From wishlist modal***
  ![Screenshot 2024-09-26 010845](https://github.com/user-attachments/assets/88fdac28-1789-4a78-9a4c-2a0fd3da8244)
  ![Screenshot 2024-09-26 012401](https://github.com/user-attachments/assets/975b7a24-ecd5-423c-99d1-66f0aa8a876e)
-
 ![Screenshot 2024-09-26 011455](https://github.com/user-attachments/assets/73aa7f2d-9a9e-429a-b83f-6a83ea263f2b)
- ### Addding To Cart modal
+
+ ***Addding To Cart modal***
  ![Screenshot 2024-09-26 010709](https://github.com/user-attachments/assets/04321c69-72fc-4c83-a614-c3fe09235708)
 
 
 - **User Authentication**: Secure login with token-based authentication, allowing users to save their cart and wishlist items.
+- - <div align="center">
+    <table>
+        <tr>
+            <td><img src="https://github.com/user-attachments/assets/b623a9ee-80b7-4183-8156-c3601212892d" alt="image 1" width="45%">before login</td>
+            <td><img src="https://github.com/user-attachments/assets/b487e171-9f45-4bc4-b424-2d3805b9595f" alt="iamge 2" width="45%">after login</td>
+        </tr>
+       
+    </table>
+</div>
+
  - ![Screenshot 2024-09-26 012609](https://github.com/user-attachments/assets/b623a9ee-80b7-4183-8156-c3601212892d) before login
 ![Screenshot 2024-09-26 012704](https://github.com/user-attachments/assets/b487e171-9f45-4bc4-b424-2d3805b9595f) after login
-
-- **Wishlist**: Save your favorite items for future purchase, 
-- ![image](https://github.com/user-attachments/assets/0cf1ebed-2a8c-4810-8f96-95737e55a2fd)
-
-- **Cart Page**: Purchase your favorite items 
- - ![Screenshot 2024-09-26 012946](https://github.com/user-attachments/assets/48ed4420-a7e2-4d58-9c79-60e22496cd5f)
-
+ 
 - **Responsive Design**: Optimized for all devices, ensuring a seamless experience whether on desktop or mobile.
 - ### Home Page
 - https://github.com/user-attachments/assets/9936dbd0-d671-4840-b654-f755e5aec1a6
