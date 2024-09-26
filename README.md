@@ -32,7 +32,6 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
 - https://github.com/user-attachments/assets/e1879e8a-fec0-4ccb-b50d-946464c6d7ec
 
 - **Shopping Cart**: Easily add items to your cart and review your selection before checkout.
-- <img src="https://github.com/user-attachments/assets/48ed4420-a7e2-4d58-9c79-60e22496cd5f" alt="img" width="70%">
 -  ![Screenshot 2024-09-26 012946](https://github.com/user-attachments/assets/48ed4420-a7e2-4d58-9c79-60e22496cd5f)
 
 -  - **Wishlist**: Save your favorite items for future purchase, 
@@ -42,12 +41,12 @@ MSLA offers a variety of features aimed at providing an intuitive and efficient 
 - <div align="center">
     <table>
         <tr>
-            <td><img src="https://github.com/user-attachments/assets/24bef5c4-5811-442d-9b9c-f7f79617d992" alt="Popup 1" width="45%"></td>
-            <td><img src="https://github.com/user-attachments/assets/a87cf05b-e689-4290-8ca0-d3865d0e9f7f" alt="Popup 2" width="45%"></td>
+            <td><img src="https://github.com/user-attachments/assets/24bef5c4-5811-442d-9b9c-f7f79617d992" alt="Popup 1""></td>
+            <td><img src="https://github.com/user-attachments/assets/a87cf05b-e689-4290-8ca0-d3865d0e9f7f" alt="Popup 2" ></td>
         </tr>
         <tr>
-            <td><img src="https://github.com/user-attachments/assets/edc42bd9-dbdb-4545-937b-aa2953fb5b9e" alt="Popup 3" width="45%"></td>
-            <td><img src="https://github.com/user-attachments/assets/5a916347-83d7-4e7a-b409-30413a528395" alt="Popup 4" width="45%"></td>
+            <td><img src="https://github.com/user-attachments/assets/edc42bd9-dbdb-4545-937b-aa2953fb5b9e" alt="Popup 3"></td>
+            <td><img src="https://github.com/user-attachments/assets/5a916347-83d7-4e7a-b409-30413a528395" alt="Popup 4"></td>
         </tr>
     </table>
 </div>
