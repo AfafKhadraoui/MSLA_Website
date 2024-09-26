@@ -7,7 +7,7 @@
 **MSLA** is a comprehensive e-commerce platform developed by a dedicated team led by Me "Khadraoui Afaf". It offers a wide range of clothing for men, women, and children, providing a convenient shopping experience for the entire family. Built using modern technologies such as ReactJS, MongoDB, and ExpressJS, MSLA was created not just as a course project but also as a practical application of the team's skills and passion for digital marketing. Explore MSLA and discover a user-friendly, responsive platform designed to meet your family's fashion needs!
 
 ###Quick Look at MSLA
-![Msla Website](https://github.com/user-attachments/assets/508b6a2f-06ee-492d-9f6c-17d8c7d206ea
+<img src="https://github.com/user-attachments/assets/508b6a2f-06ee-492d-9f6c-17d8c7d206ea" alt="MSLA">
 
 ## Introduction
 In the spirit of collaboration and learning, I am proud to present **MSLA**, an e-commerce platform created as a final project for the web developement training we took this summer. MSLA stands for our team members’ initials: **Malek, Sirine, Lina, and Afaf** (myself, the project leader). This project not only fulfills our course requirements but also serves as a practical application of the skills we learned throughout the course.
